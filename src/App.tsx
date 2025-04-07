@@ -228,6 +228,22 @@ function App() {
         </div>
       </section>
 
+      <section className="relative py-24">
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide">
+            Ready to Transform Your Space?
+          </h2>
+          <p className="text-warm-gray text-lg md:text-xl max-w-2xl mx-auto mb-8">
+            Create the perfect ambiance with a custom fireplace solution tailored to your home.
+          </p>
+          <a href="#contact" className="luxury-button inline-flex items-center space-x-2">
+            <span>Schedule Your Consultation</span>
+            <Flame className="h-5 w-5" />
+          </a>
+        </div>
+      </section>
+
       <section className="py-12 px-6 bg-black/30 backdrop-blur-sm border-y border-gold/10">
         <div className="max-w-7xl mx-auto">
           <div className="relative">
