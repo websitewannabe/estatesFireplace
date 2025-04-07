@@ -35,9 +35,9 @@ function App() {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 50);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const brands = [
@@ -75,30 +75,51 @@ function App() {
 
   return (
     <div className="min-h-screen bg-rich-black">
-      <nav className={`fixed w-full z-50 px-6 py-4 transition-all duration-300 ${
-        hasScrolled 
-          ? "backdrop-blur-sm bg-black/80 border-b border-gold/10" 
-          : "bg-transparent"
-      }`}>
+      <nav
+        className={`fixed w-full z-50 px-6 py-4 transition-all duration-300 ${
+          hasScrolled
+            ? "backdrop-blur-sm bg-black/80 border-b border-gold/10"
+            : "bg-transparent"
+        }`}
+      >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center group">
-            <img src="/images/estateLogo.png" alt="Estates Fireplace" className="h-16 w-auto" />
+            <img
+              src="/images/estateLogo.png"
+              alt="Estates Fireplace"
+              className="h-16 w-auto"
+            />
           </div>
 
           <div className="hidden md:flex space-x-8 text-lg">
-            <a href="#home" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+            <a
+              href="#home"
+              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
+            >
               Home
             </a>
-            <a href="#services" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+            <a
+              href="#services"
+              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
+            >
               Services
             </a>
-            <a href="#products" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+            <a
+              href="#products"
+              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
+            >
               Products
             </a>
-            <a href="#more" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+            <a
+              href="#more"
+              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
+            >
               More
             </a>
-            <a href="#quote" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+            <a
+              href="#quote"
+              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
+            >
               Request a Quote
             </a>
           </div>
@@ -228,16 +249,27 @@ function App() {
         </div>
       </section>
 
-      <section className="relative py-24" style={{ backgroundImage: 'url("/images/cta.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section
+        className="relative py-24"
+        style={{
+          backgroundImage: 'url("/images/cta.png")',
+          backgroundSize: "100%",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide">
             Ready to Transform Your Space?
           </h2>
           <p className="text-warm-gray text-lg md:text-xl max-w-2xl mx-auto mb-8">
-            Create the perfect ambiance with a custom fireplace solution tailored to your home.
+            Create the perfect ambiance with a custom fireplace solution
+            tailored to your home.
           </p>
-          <a href="#contact" className="luxury-button inline-flex items-center space-x-2">
+          <a
+            href="#contact"
+            className="luxury-button inline-flex items-center space-x-2"
+          >
             <span>Schedule Your Consultation</span>
             <Flame className="h-5 w-5" />
           </a>
@@ -434,14 +466,16 @@ function App() {
         </div>
       </section>
 
-      
-
       <footer className="bg-black py-16 px-6 border-t border-gold/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <div className="space-y-6">
               <div className="flex items-center group">
-                <img src="/images/estateLogo.png" alt="Estates Fireplace" className="h-12 w-auto" />
+                <img
+                  src="/images/estateLogo.png"
+                  alt="Estates Fireplace"
+                  className="h-12 w-auto"
+                />
               </div>
               <p className="text-warm-gray leading-relaxed">
                 Crafting bespoke fireplace solutions for Southampton's most
@@ -474,22 +508,19 @@ function App() {
                 Quick Links
               </h3>
               <ul className="space-y-4">
-                {[
-                  "Home",
-                  "Services",
-                  "Portfolio",
-                  "Testimonials"
-                ].map((link) => (
-                  <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase()}`}
-                      className="text-warm-gray hover:text-gold transition-colors duration-300 flex items-center"
-                    >
-                      <span className="h-px w-4 bg-gold/50 mr-2"></span>
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {["Home", "Services", "Portfolio", "Testimonials"].map(
+                  (link) => (
+                    <li key={link}>
+                      <a
+                        href={`#${link.toLowerCase()}`}
+                        className="text-warm-gray hover:text-gold transition-colors duration-300 flex items-center"
+                      >
+                        <span className="h-px w-4 bg-gold/50 mr-2"></span>
+                        {link}
+                      </a>
+                    </li>
+                  ),
+                )}
               </ul>
             </div>
 
