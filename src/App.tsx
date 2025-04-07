@@ -29,6 +29,16 @@ import {
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 50);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const brands = [
     { name: "Regency", logo: "/images/slider/regencyLogo.png" },
@@ -65,7 +75,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-rich-black">
-      <nav className="fixed w-full z-50 backdrop-blur-sm bg-black/80 px-6 py-4 border-b border-gold/10">
+      <nav className={`fixed w-full z-50 px-6 py-4 transition-all duration-300 ${
+        hasScrolled 
+          ? "backdrop-blur-sm bg-black/80 border-b border-gold/10" 
+          : "bg-transparent"
+      }`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center group">
             <Flame className="h-8 w-8 text-gold animate-flame" />
