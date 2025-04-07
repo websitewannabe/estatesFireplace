@@ -81,7 +81,7 @@ function App() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold/80 via-gold to-gold/80">Fire & Warmth</span>
               </h1>
               <p className="font-inter text-xl md:text-2xl max-w-2xl mb-8 text-gray-200">
-                Bespoke fireplace designs for Southampton's most distinguished homes
+                Bespoke fireplace designs to light up your home with elegance and warmth.
               </p>
               <a 
                 href="#contact"
