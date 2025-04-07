@@ -327,13 +327,13 @@ function App() {
                       <img
                         src={brand.logo}
                         alt={brand.name}
-                        className="h-24 w-auto mx-auto object-contain"
+                        className="h-32 w-auto mx-auto object-contain"
                       />
-                      <div className="w-full h-64 overflow-hidden rounded-lg">
+                      <div className="w-full h-96 overflow-hidden rounded-lg">
                         <img
                           src={brand.image}
                           alt={`${brand.name} Example`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover object-center"
                         />
                       </div>
                     </div>
