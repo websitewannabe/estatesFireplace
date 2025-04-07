@@ -352,10 +352,9 @@ function App() {
           <h2 className="section-title gold-underline">Our Portfolio</h2>
           <div className="portfolio-grid mt-12">
             {[
-              "/images/portfolio/fireplace-1.jpg",
-              "/images/portfolio/fireplace-2.jpg",
-              "/images/portfolio/fireplace-3.jpg",
-              "/images/portfolio/fireplace-4.jpg",
+              "/images/portfolio/port1.png",
+              "/images/portfolio/port2.png",
+              "/images/portfolio/port3.jpg",
             ].map((image, index) => (
               <div
                 key={index}
@@ -379,14 +378,14 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             {[
               {
-                text: "Estates Fireplace transformed our living room into a sophisticated sanctuary. Their attention to detail and craftsmanship is unmatched.",
-                author: "Elizabeth Montgomery",
-                role: "Luxury Home Owner",
+                text: "Very pleased with chimney liner replacement work. Repairmen were pleasant, explained work being done & completely removed all trash/old liner. Definitely recommend Estates.",
+                author: "Carolyn K",
+                role: "",
               },
               {
-                text: "The team's expertise in custom fireplace design helped us achieve exactly what we envisioned. A truly premium service.",
-                author: "James Harrison",
-                role: "Interior Designer",
+                text: "The fireplace looks great. Allen, Will and Steve came out to install and were professional and very nice. Thank you for a job well done.",
+                author: "George K",
+                role: "",
               },
             ].map((testimonial, index) => (
               <div key={index} className="testimonial-card">
