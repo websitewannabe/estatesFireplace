@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white;
+  }
+
+  /* Elegant scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold bg-opacity-50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-opacity-70;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-white hover:text-gold transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .section-title {
+    @apply font-playfair text-4xl md:text-5xl font-semibold mb-6 text-white tracking-wide;
+  }
+  
+  .gold-underline {
+    @apply relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-24 after:h-0.5 after:bg-gradient-to-r after:from-gold/40 after:via-gold after:to-gold/40;
+  }
+
+  .gold-underline-center {
+    @apply relative flex items-center justify-center gap-6 before:content-[''] before:h-0.5 before:w-24 before:bg-gradient-to-r before:from-gold/40 before:via-gold before:to-gold/40 after:content-[''] after:h-0.5 after:w-24 after:bg-gradient-to-r after:from-gold/40 after:via-gold after:to-gold/40;
+  }
+
+  .luxury-input {
+    @apply w-full bg-black/50 border border-warm-gray/20 p-4 focus:border-gold outline-none transition-all duration-300 rounded-sm backdrop-blur-sm;
+  }
+
+  .luxury-button {
+    @apply bg-gradient-to-r from-gold/90 via-gold to-gold/90 text-black font-semibold py-4 px-8 hover:from-gold hover:via-gold/90 hover:to-gold transition-all duration-500 transform hover:scale-[1.02] shadow-lg hover:shadow-gold/20;
+  }
+
+  .footer-link {
+    @apply text-warm-gray hover:text-gold transition-colors duration-300 flex items-center space-x-2;
+  }
+
+  .footer-heading {
+    @apply font-playfair text-xl mb-6 tracking-wide relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-px after:bg-gold/30;
+  }
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.7)
+  ), radial-gradient(
+    circle at center,
+    rgba(184,134,11,0.1),
+    transparent 70%
+  );
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  @apply relative bg-warm-gray/5 p-8 rounded-sm border border-gold/20 backdrop-blur-sm;
+  background: linear-gradient(45deg, rgba(184,134,11,0.03), rgba(184,134,11,0.08));
+}
+
+/* Luxury card hover effect */
+.service-card {
+  @apply relative overflow-hidden;
+}
+
+.service-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/5 to-gold/0 opacity-0 transition-opacity duration-500;
+}
+
+.service-card:hover::before {
+  @apply opacity-100;
+}
+
+/* Animated gradient border */
+@keyframes borderGlow {
+  0%, 100% {
+    border-image: linear-gradient(45deg, rgba(184,134,11,0.2), rgba(184,134,11,0.6), rgba(184,134,11,0.2)) 1;
+  }
+  50% {
+    border-image: linear-gradient(45deg, rgba(184,134,11,0.6), rgba(184,134,11,0.2), rgba(184,134,11,0.6)) 1;
+  }
+}
+
+.animated-border {
+  border: 1px solid;
+  border-image: linear-gradient(45deg, rgba(184,134,11,0.2), rgba(184,134,11,0.6), rgba(184,134,11,0.2)) 1;
+  animation: borderGlow 4s ease-in-out infinite;
+}
