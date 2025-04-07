@@ -82,10 +82,10 @@ function App() {
       }`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center group">
-            <img src="/images/estateLogo.png" alt="Estates Fireplace" className="h-12 w-auto" />
+            <img src="/images/estateLogo.png" alt="Estates Fireplace" className="h-16 w-auto" />
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 text-lg">
             <a href="#home" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Home
             </a>
