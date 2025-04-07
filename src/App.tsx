@@ -274,10 +274,10 @@ function App() {
           <h2 className="section-title gold-underline">Our Portfolio</h2>
           <div className="portfolio-grid mt-12">
             {[
-              "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1600607687126-c2f307833c70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+              "/images/portfolio/fireplace-1.jpg",
+              "/images/portfolio/fireplace-2.jpg",
+              "/images/portfolio/fireplace-3.jpg",
+              "/images/portfolio/fireplace-4.jpg",
             ].map((image, index) => (
               <div key={index} className="relative group overflow-hidden animated-border">
                 <img 
