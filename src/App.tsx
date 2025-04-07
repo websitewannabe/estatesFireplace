@@ -89,17 +89,14 @@ function App() {
             <a href="#home" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Home
             </a>
-            <a href="#services" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
-              Services
+            <a href="#products" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+              Products
             </a>
-            <a href="#portfolio" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
-              Portfolio
+            <a href="#more" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+              More
             </a>
-            <a href="#testimonials" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
-              Testimonials
-            </a>
-            <a href="#contact" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
-              Contact
+            <a href="#quote" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+              Request a Quote
             </a>
           </div>
 
@@ -117,17 +114,14 @@ function App() {
               <a href="#home" className="nav-link">
                 Home
               </a>
-              <a href="#services" className="nav-link">
-                Services
+              <a href="#products" className="nav-link">
+                Products
               </a>
-              <a href="#portfolio" className="nav-link">
-                Portfolio
+              <a href="#more" className="nav-link">
+                More
               </a>
-              <a href="#testimonials" className="nav-link">
-                Testimonials
-              </a>
-              <a href="#contact" className="nav-link">
-                Contact
+              <a href="#quote" className="nav-link">
+                Request a Quote
               </a>
             </div>
           </div>
