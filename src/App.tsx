@@ -418,69 +418,7 @@ function App() {
         </div>
       </section>
 
-      <section
-        id="contact"
-        className="bg-warm-gray/5 backdrop-blur-sm py-20 px-6"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="section-title gold-underline">Contact Us</h2>
-          <div className="grid md:grid-cols-2 gap-12 mt-12">
-            <div>
-              <h3 className="font-playfair text-2xl mb-6 tracking-wide">
-                Get in Touch
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-center group">
-                  <Phone className="text-gold mr-4 group-hover:animate-bounce" />
-                  <span className="group-hover:text-gold transition-colors duration-300">
-                    (215) 555-0123
-                  </span>
-                </div>
-                <div className="flex items-center group">
-                  <Mail className="text-gold mr-4 group-hover:animate-bounce" />
-                  <span className="group-hover:text-gold transition-colors duration-300">
-                    info@estatesfireplace.com
-                  </span>
-                </div>
-                <div className="flex items-center group">
-                  <MapPin className="text-gold mr-4 group-hover:animate-bounce" />
-                  <span className="group-hover:text-gold transition-colors duration-300">
-                    Southampton, PA
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <form className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="luxury-input"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="luxury-input"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Your Message"
-                    rows={4}
-                    className="luxury-input"
-                  ></textarea>
-                </div>
-                <button type="submit" className="luxury-button w-full">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <footer className="bg-black py-16 px-6 border-t border-gold/10">
         <div className="max-w-7xl mx-auto">
@@ -524,8 +462,7 @@ function App() {
                   "Home",
                   "Services",
                   "Portfolio",
-                  "Testimonials",
-                  "Contact",
+                  "Testimonials"
                 ].map((link) => (
                   <li key={link}>
                     <a
