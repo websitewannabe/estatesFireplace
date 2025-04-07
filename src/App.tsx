@@ -112,8 +112,8 @@ function App() {
               },
               {
                 icon: Ruler,
-                title: "2. Custom Design",
-                description: "Our team creates a bespoke design that perfectly balances your aesthetic desires with technical requirements.",
+                title: "2. In-Home Site Visit",
+                description: "We schedule an in-home visit to examine your space. Our physical examination combined with your expressed needs will confirm the proper product for your home.",
               },
               {
                 icon: Sparkles,
