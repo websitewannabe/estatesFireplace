@@ -82,10 +82,7 @@ function App() {
       }`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center group">
-            <Flame className="h-8 w-8 text-gold animate-flame" />
-            <span className="ml-2 font-playfair text-2xl tracking-wider">
-              Estates Fireplace
-            </span>
+            <img src="/images/estateLogo.png" alt="Estates Fireplace" className="h-12 w-auto" />
           </div>
 
           <div className="hidden md:flex space-x-8">
@@ -490,10 +487,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <div className="space-y-6">
               <div className="flex items-center group">
-                <Flame className="h-8 w-8 text-gold group-hover:animate-flame" />
-                <span className="ml-2 font-playfair text-2xl tracking-wider">
-                  Estates Fireplace
-                </span>
+                <img src="/images/estateLogo.png" alt="Estates Fireplace" className="h-12 w-auto" />
               </div>
               <p className="text-warm-gray leading-relaxed">
                 Crafting bespoke fireplace solutions for Southampton's most
