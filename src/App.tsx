@@ -6,7 +6,7 @@ function App() {
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
 
   const brands = [
-    { name: "Regency", logo: "https://www.regency-fire.com/images/default-source/default-album/regency-logo-2019.png" },
+    { name: "Regency", logo: "/images/slider/regencyLogo.png" },
     { name: "Hampton", logo: "https://www.regency-fire.com/images/default-source/default-album/hampton-logo-2019.png" },
     { name: "MagraHearth", logo: "https://www.magrahearth.com/wp-content/uploads/2019/01/magra-hearth-logo.png" },
     { name: "Mendota", logo: "https://mendotahearth.com/wp-content/themes/mendota2019/images/mendota-logo.svg" },
