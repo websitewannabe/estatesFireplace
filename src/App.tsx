@@ -127,9 +127,9 @@ function App() {
         <div
           className="absolute inset-0 bg-cover bg-center hero-overlay"
           style={{
-            backgroundImage: "url('/images/fireGif.gif')",
-            backgroundSize: '150%',
-            backgroundPosition: 'center',
+            backgroundImage: "url('/images/fireVideo.mp4')",
+            backgroundSize: "80%",
+            backgroundPosition: "center",
           }}
         />
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40" />
