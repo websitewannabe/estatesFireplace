@@ -6,12 +6,12 @@ function App() {
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
 
   const brands = [
-    { name: "Regency" },
-    { name: "Hampton" },
-    { name: "MagraHearth" },
-    { name: "Mendota" },
-    { name: "MFire" },
-    { name: "Hargrove" }
+    { name: "Regency", logo: "https://www.regency-fire.com/images/default-source/default-album/regency-logo-2019.png" },
+    { name: "Hampton", logo: "https://www.regency-fire.com/images/default-source/default-album/hampton-logo-2019.png" },
+    { name: "MagraHearth", logo: "https://www.magrahearth.com/wp-content/uploads/2019/01/magra-hearth-logo.png" },
+    { name: "Mendota", logo: "https://mendotahearth.com/wp-content/themes/mendota2019/images/mendota-logo.svg" },
+    { name: "MFire", logo: "https://mfirefireplaces.com/wp-content/uploads/2021/01/mfire-logo.png" },
+    { name: "Hargrove", logo: "https://www.hargrovegaslogs.com/wp-content/uploads/2019/01/hargrove-logo.png" }
   ];
 
   const nextBrand = () => {
@@ -187,10 +187,11 @@ function App() {
                     style={{ width: '33.333%' }}
                   >
                     <div className="text-center">
-                      <h3 className="font-playfair text-xl md:text-2xl tracking-wider text-gold">
-                        {brand.name}
-                      </h3>
-                      <p className="text-warm-gray text-sm mt-1">Premium Fireplace Solutions</p>
+                      <img 
+                        src={brand.logo} 
+                        alt={brand.name}
+                        className="h-16 w-auto mx-auto object-contain"
+                      />
                     </div>
                   </div>
                 ))}
