@@ -107,8 +107,8 @@ function App() {
             {[
               {
                 icon: CalendarCheck,
-                title: "1. Initial Consultation",
-                description: "Schedule a personalized consultation with our design experts to discuss your vision, preferences, and space requirements.",
+                title: "1. Find the Perfect Fireplace",
+                description: "Finding the right fireplace for your home involves understanding your heating requirements, fuel type preferences, and overall feel. We'll listen to your needs and recommend products that fit perfectly.",
               },
               {
                 icon: Ruler,
