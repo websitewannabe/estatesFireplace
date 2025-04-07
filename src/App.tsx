@@ -41,23 +41,35 @@ function App() {
   }, []);
 
   const brands = [
-    { name: "Regency", logo: "/images/slider/regencyLogo.png" },
+    { 
+      name: "Regency", 
+      logo: "/images/slider/regencyLogo.png",
+      image: "/images/portfolio/port1.png"
+    },
     {
       name: "Hampton",
       logo: "/images/slider/Hampton.png",
+      image: "/images/portfolio/port2.png"
     },
     {
       name: "MagraHearth",
       logo: "/images/slider/magraHearth.png",
+      image: "/images/portfolio/port3.jpg"
     },
-    { name: "Mendota", logo: "/images/slider/Mendota.png" },
+    { 
+      name: "Mendota", 
+      logo: "/images/slider/Mendota.png",
+      image: "/images/portfolio/port1.png"
+    },
     {
       name: "MFFire",
       logo: "/images/slider/mffire_logo.png",
+      image: "/images/portfolio/port2.png"
     },
     {
       name: "Hargrove",
       logo: "/images/slider/Hargrove.png",
+      image: "/images/portfolio/port3.jpg"
     },
   ];
 
@@ -311,12 +323,19 @@ function App() {
                     }`}
                     style={{ width: "100%" }}
                   >
-                    <div className="text-center px-8">
+                    <div className="flex flex-col items-center px-8 space-y-4">
                       <img
                         src={brand.logo}
                         alt={brand.name}
                         className="h-16 w-auto mx-auto object-contain"
                       />
+                      <div className="w-full h-48 overflow-hidden rounded-lg">
+                        <img
+                          src={brand.image}
+                          alt={`${brand.name} Example`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
                 ))}
