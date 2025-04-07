@@ -128,7 +128,7 @@ function App() {
           className="absolute inset-0 bg-cover bg-center hero-overlay"
           style={{
             backgroundImage: "url('/images/fireGif.gif')",
-            backgroundSize: 'cover',
+            backgroundSize: '150%',
             backgroundPosition: 'center',
           }}
         />
