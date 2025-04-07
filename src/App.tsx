@@ -41,35 +41,35 @@ function App() {
   }, []);
 
   const brands = [
-    { 
-      name: "Regency", 
+    {
+      name: "Regency",
       logo: "/images/slider/regencyLogo.png",
-      image: "/images/portfolio/port1.png"
+      image: "/images/slider/regencyImage.png",
     },
     {
       name: "Hampton",
       logo: "/images/slider/Hampton.png",
-      image: "/images/portfolio/port2.png"
+      image: "/images/slider/hamptonImage.png",
     },
     {
       name: "MagraHearth",
       logo: "/images/slider/magraHearth.png",
-      image: "/images/portfolio/port3.jpg"
+      image: "/images/slider/mhimage.jpg",
     },
-    { 
-      name: "Mendota", 
+    {
+      name: "Mendota",
       logo: "/images/slider/Mendota.png",
-      image: "/images/portfolio/port1.png"
+      image: "/images/slider/mendotaImage.png",
     },
     {
       name: "MFFire",
       logo: "/images/slider/mffire_logo.png",
-      image: "/images/portfolio/port2.png"
+      image: "/images/slider/fire.jpg",
     },
     {
       name: "Hargrove",
       logo: "/images/slider/Hargrove.png",
-      image: "/images/portfolio/port3.jpg"
+      image: "/images/slider/hargroveImage.png",
     },
   ];
 
