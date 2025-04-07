@@ -288,7 +288,7 @@ function App() {
         </div>
       </section>
 
-      <section className="py-12 px-6 bg-black/30 backdrop-blur-sm border-y border-gold/10">
+      <section className="py-20 px-6 bg-black/30 backdrop-blur-sm border-y border-gold/10">
         <div className="max-w-7xl mx-auto">
           <div className="relative">
             <button
@@ -327,9 +327,9 @@ function App() {
                       <img
                         src={brand.logo}
                         alt={brand.name}
-                        className="h-16 w-auto mx-auto object-contain"
+                        className="h-24 w-auto mx-auto object-contain"
                       />
-                      <div className="w-full h-48 overflow-hidden rounded-lg">
+                      <div className="w-full h-64 overflow-hidden rounded-lg">
                         <img
                           src={brand.image}
                           alt={`${brand.name} Example`}
