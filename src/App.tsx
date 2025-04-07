@@ -124,14 +124,15 @@ function App() {
       </nav>
 
       <section id="home" className="relative h-screen">
-        <div
-          className="absolute inset-0 bg-cover bg-center hero-overlay"
-          style={{
-            backgroundImage: "url('/images/fireVideo.mp4')",
-            backgroundSize: "80%",
-            backgroundPosition: "center",
-          }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/images/fireVideo.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40" />
         <div className="relative h-full flex items-center">
           <div className="max-w-7xl mx-auto px-6 pt-20">
