@@ -228,7 +228,7 @@ function App() {
         </div>
       </section>
 
-      <section className="relative py-24">
+      <section className="relative py-24" style={{ backgroundImage: 'url("/images/cta.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide">
