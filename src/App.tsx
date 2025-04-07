@@ -117,8 +117,8 @@ function App() {
               },
               {
                 icon: Sparkles,
-                title: "3. Expert Installation",
-                description: "Watch as our master craftsmen bring your vision to life with meticulous attention to detail and superior workmanship.",
+                title: "3. Installation by Licensed Professional",
+                description: "The final step is to install your new fireplace. We will schedule an installation date and one of our expert installers will perform your installation. Your new fireplace is only 3 simple steps away!",
               }
             ].map((step, index) => (
               <div 
