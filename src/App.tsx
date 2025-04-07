@@ -86,19 +86,19 @@ function App() {
           </div>
 
           <div className="hidden md:flex space-x-8">
-            <a href="#home" className="nav-link">
+            <a href="#home" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Home
             </a>
-            <a href="#services" className="nav-link">
+            <a href="#services" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Services
             </a>
-            <a href="#portfolio" className="nav-link">
+            <a href="#portfolio" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Portfolio
             </a>
-            <a href="#testimonials" className="nav-link">
+            <a href="#testimonials" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Testimonials
             </a>
-            <a href="#contact" className="nav-link">
+            <a href="#contact" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Contact
             </a>
           </div>
