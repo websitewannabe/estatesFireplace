@@ -89,6 +89,9 @@ function App() {
             <a href="#home" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Home
             </a>
+            <a href="#services" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
+              Services
+            </a>
             <a href="#products" className={`nav-link ${hasScrolled ? 'text-gold' : 'text-white'}`}>
               Products
             </a>
@@ -113,6 +116,9 @@ function App() {
             <div className="flex flex-col space-y-4 px-6">
               <a href="#home" className="nav-link">
                 Home
+              </a>
+              <a href="#services" className="nav-link">
+                Services
               </a>
               <a href="#products" className="nav-link">
                 Products
