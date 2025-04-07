@@ -127,8 +127,9 @@ function App() {
         <div
           className="absolute inset-0 bg-cover bg-center hero-overlay"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1560185127-2d5d5f1e12b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
+            backgroundImage: "url('/images/fireGif.gif')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         />
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40" />
