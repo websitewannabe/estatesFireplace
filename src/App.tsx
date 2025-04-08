@@ -274,14 +274,14 @@ function App() {
           <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide text-black">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-warm-gray text-lg md:text-xl max-w-2xl mx-auto mb-8">
+          <p className="text-gray-800 text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Create the perfect ambiance with a custom fireplace solution
             tailored to your home.
           </p>
           <a
             href="#contact"
-            className="luxury-button inline-flex items-center space-x-2"
-            style={{ background: "#C14F33", backgroundImage: "none" }}
+            className="luxury-button inline-flex items-center space-x-2 text-white"
+            style={{ background: "#000000", backgroundImage: "none" }}
           >
             <span>Schedule Your Consultation</span>
             <Flame className="h-5 w-5" />
