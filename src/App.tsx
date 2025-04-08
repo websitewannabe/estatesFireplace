@@ -175,20 +175,17 @@ function App() {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             poster="/images/long_cta.jpg"
             className="absolute inset-0 w-full h-full object-cover"
             onError={(e) => {
+              console.error('Video failed to load:', e);
               const target = e.target as HTMLVideoElement;
               target.style.display = 'none';
-              const fallbackImg = document.createElement('img');
-              fallbackImg.src = '/images/long_cta.jpg';
-              fallbackImg.className = 'absolute inset-0 w-full h-full object-cover';
-              target.parentElement?.appendChild(fallbackImg);
             }}
           >
-            <source src="/images/fireVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            <source src={import.meta.env.PROD ? '/images/fireVideo.mp4' : './public/images/fireVideo.mp4'} type="video/mp4" />
+            <img src="/images/long_cta.jpg" alt="Fireplace" className="absolute inset-0 w-full h-full object-cover" />
           </video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
