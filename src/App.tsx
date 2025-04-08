@@ -311,20 +311,20 @@ function App() {
               <div
                 className="flex transition-transform duration-500 ease-out"
                 style={{
-                  transform: `translateX(-${currentBrandIndex * 100}%)`,
+                  transform: `translateX(-${currentBrandIndex * (100/3)}%)`,
                 }}
               >
                 {brands.map((brand, index) => (
                   <div
                     key={index}
                     className={`flex-shrink-0 transition-all duration-500 ${
-                      index === currentBrandIndex
+                      Math.abs(index - currentBrandIndex) <= 1
                         ? "opacity-100 scale-100"
                         : "opacity-50 scale-90"
                     }`}
-                    style={{ width: "100%" }}
+                    style={{ width: "33.333%" }}
                   >
-                    <div className="flex flex-col items-center px-8 space-y-4">
+                    <div className="flex flex-col items-center px-4 space-y-4">
                       <img
                         src={brand.logo}
                         alt={brand.name}
