@@ -30,6 +30,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [activeTab, setActiveTab] = useState('services');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -364,8 +365,28 @@ function App() {
 
       <section id="services" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title gold-underline">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <h2 className="section-title gold-underline">Our Services & Products</h2>
+          <div className="flex justify-center space-x-8 mt-12 mb-8">
+            <button
+              onClick={() => setActiveTab('services')}
+              className={`px-6 py-2 font-playfair text-lg transition-all duration-300 border-b-2 ${
+                activeTab === 'services' ? 'border-gold text-gold' : 'border-transparent text-warm-gray hover:text-gold'
+              }`}
+            >
+              Our Services
+            </button>
+            <button
+              onClick={() => setActiveTab('products')}
+              className={`px-6 py-2 font-playfair text-lg transition-all duration-300 border-b-2 ${
+                activeTab === 'products' ? 'border-gold text-gold' : 'border-transparent text-warm-gray hover:text-gold'
+              }`}
+            >
+              Our Products
+            </button>
+          </div>
+          
+          {activeTab === 'services' ? (
+            <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Chimney Sweeps",
@@ -424,6 +445,50 @@ function App() {
               </div>
             ))}
           </div>
+          ) : (
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Fireplaces",
+                  description: "Discover our extensive collection of modern and traditional fireplaces that combine elegance with efficient heating.",
+                  icon: Flame,
+                },
+                {
+                  title: "Fireplace Inserts",
+                  description: "Transform your existing fireplace with our energy-efficient inserts, designed to enhance both aesthetics and heating performance.",
+                  icon: SprayCan,
+                },
+                {
+                  title: "Stoves",
+                  description: "Browse our selection of wood, gas, and pellet stoves that offer both style and superior heating capabilities.",
+                  icon: Home,
+                },
+                {
+                  title: "Mantles",
+                  description: "Elevate your fireplace with our custom-crafted mantles, available in various materials and designs to match your décor.",
+                  icon: Building2,
+                },
+                {
+                  title: "Outdoor Living",
+                  description: "Create the perfect outdoor living space with our range of fire pits, outdoor fireplaces, and cooking solutions.",
+                  icon: Umbrella,
+                },
+              ].map((product, index) => (
+                <div
+                  key={index}
+                  className="service-card backdrop-blur-sm bg-warm-gray/5 p-8 rounded-sm border border-gold/10 hover:border-gold/30 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-6">
+                    <product.icon className="h-10 w-10 text-gold" />
+                    <h3 className="font-playfair text-2xl ml-4 tracking-wide">
+                      {product.title}
+                    </h3>
+                  </div>
+                  <p className="text-warm-gray">{product.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
