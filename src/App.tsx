@@ -169,27 +169,17 @@ function App() {
       </nav>
 
       <section id="home" className="relative h-screen">
-        {/* Using picture element for better fallback handling */}
-        <picture className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="/images/fireVideo.mp4" type="video/mp4" />
-          </video>
-          <img 
-            src="/images/fireGif.gif" 
-            alt="Fireplace Animation" 
-            className="absolute inset-0 w-full h-full object-cover"
-            onError={(e) => {
-              e.currentTarget.src = '/images/long_cta.jpg';
-            }}
-          />
-        </picture>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/images/fireVideo.mp4" type="video/mp4" />
+          <img src="/images/fireGif.gif" alt="Fireplace" className="absolute inset-0 w-full h-full object-cover" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/60" />
         <div className="relative h-full flex items-center">
