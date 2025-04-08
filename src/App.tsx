@@ -269,7 +269,7 @@ function App() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#B8860B]/80" />
+        <div className="absolute inset-0 bg-[#B8860B]/85" />
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide text-black">
             Ready to Transform Your Space?
