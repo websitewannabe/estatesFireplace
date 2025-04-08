@@ -30,7 +30,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [activeTab, setActiveTab] = useState('services');
+  const [activeTab, setActiveTab] = useState("services");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -176,16 +176,14 @@ function App() {
             loop
             playsInline
             preload="metadata"
-            poster="/images/long_cta.jpg"
             className="absolute inset-0 w-full h-full object-cover"
             onError={(e) => {
-              console.error('Video failed to load:', e);
+              console.error("Video failed to load:", e);
               const target = e.target as HTMLVideoElement;
-              target.style.display = 'none';
+              target.style.display = "none";
             }}
           >
-            <source src={import.meta.env.PROD ? '/images/fireVideo.mp4' : './public/images/fireVideo.mp4'} type="video/mp4" />
-            <img src="/images/long_cta.jpg" alt="Fireplace" className="absolute inset-0 w-full h-full object-cover" />
+            <source src="/images/fireVideo.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
@@ -323,7 +321,7 @@ function App() {
               <div
                 className="flex transition-transform duration-500 ease-out"
                 style={{
-                  transform: `translateX(-${currentBrandIndex * (100/3)}%)`,
+                  transform: `translateX(-${currentBrandIndex * (100 / 3)}%)`,
                 }}
               >
                 {brands.map((brand, index) => (
@@ -375,112 +373,123 @@ function App() {
 
       <section id="services" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title gold-underline">Our Services & Products</h2>
+          <h2 className="section-title gold-underline">
+            Our Services & Products
+          </h2>
           <div className="flex justify-center space-x-8 mt-12 mb-8">
             <button
-              onClick={() => setActiveTab('services')}
+              onClick={() => setActiveTab("services")}
               className={`px-6 py-2 font-playfair text-lg transition-all duration-300 border-b-2 ${
-                activeTab === 'services' ? 'border-gold text-gold' : 'border-transparent text-warm-gray hover:text-gold'
+                activeTab === "services"
+                  ? "border-gold text-gold"
+                  : "border-transparent text-warm-gray hover:text-gold"
               }`}
             >
               Our Services
             </button>
             <button
-              onClick={() => setActiveTab('products')}
+              onClick={() => setActiveTab("products")}
               className={`px-6 py-2 font-playfair text-lg transition-all duration-300 border-b-2 ${
-                activeTab === 'products' ? 'border-gold text-gold' : 'border-transparent text-warm-gray hover:text-gold'
+                activeTab === "products"
+                  ? "border-gold text-gold"
+                  : "border-transparent text-warm-gray hover:text-gold"
               }`}
             >
               Our Products
             </button>
           </div>
 
-          {activeTab === 'services' ? (
+          {activeTab === "services" ? (
             <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Chimney Sweeps",
-                description:
-                  "Keep your home safe with a clean chimney by having it inspected and swept on a regular basis.",
-                icon: Brush,
-              },
-              {
-                title: "Chimney Inspections",
-                description:
-                  "Purchasing or selling a home? We offer certified chimney inspections!",
-                icon: Home,
-              },
-              {
-                title: "Chimney Linings",
-                description:
-                  "Now offering a variety of chimney lining systems to better your chimney and keep your home safe!",
-                icon: HardHat,
-              },
-              {
-                title: "Masonry",
-                description:
-                  "Chimney looking dull? We offer stucco repairs and crown work to give your chimney another chance!",
-                icon: Building2,
-              },
-              {
-                title: "Awnings",
-                description:
-                  "Stay covered while enjoying the outdoors! With a selection of quality products, we are here to keep you cool.",
-                icon: Umbrella,
-              },
-              {
-                title: "Propane Delivery",
-                description:
-                  "Delivering to Bucks and Montgomery Counties, we sell propane tanks and offer propane delivery! Call 215-997-6880 for more information.",
-                icon: Fuel,
-              },
-              {
-                title: "Pressure Washing",
-                description:
-                  "We pressure wash safely to maintain and preserve property aesthetics and structural integrity without damage.",
-                icon: SprayCan,
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="service-card backdrop-blur-sm bg-warm-gray/5 p-8 rounded-sm border border-gold/10 hover:border-gold/30 transition-all duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <service.icon className="h-10 w-10 text-gold" />
-                  <h3 className="font-playfair text-2xl ml-4 tracking-wide">
-                    {service.title}
-                  </h3>
+              {[
+                {
+                  title: "Chimney Sweeps",
+                  description:
+                    "Keep your home safe with a clean chimney by having it inspected and swept on a regular basis.",
+                  icon: Brush,
+                },
+                {
+                  title: "Chimney Inspections",
+                  description:
+                    "Purchasing or selling a home? We offer certified chimney inspections!",
+                  icon: Home,
+                },
+                {
+                  title: "Chimney Linings",
+                  description:
+                    "Now offering a variety of chimney lining systems to better your chimney and keep your home safe!",
+                  icon: HardHat,
+                },
+                {
+                  title: "Masonry",
+                  description:
+                    "Chimney looking dull? We offer stucco repairs and crown work to give your chimney another chance!",
+                  icon: Building2,
+                },
+                {
+                  title: "Awnings",
+                  description:
+                    "Stay covered while enjoying the outdoors! With a selection of quality products, we are here to keep you cool.",
+                  icon: Umbrella,
+                },
+                {
+                  title: "Propane Delivery",
+                  description:
+                    "Delivering to Bucks and Montgomery Counties, we sell propane tanks and offer propane delivery! Call 215-997-6880 for more information.",
+                  icon: Fuel,
+                },
+                {
+                  title: "Pressure Washing",
+                  description:
+                    "We pressure wash safely to maintain and preserve property aesthetics and structural integrity without damage.",
+                  icon: SprayCan,
+                },
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="service-card backdrop-blur-sm bg-warm-gray/5 p-8 rounded-sm border border-gold/10 hover:border-gold/30 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-6">
+                    <service.icon className="h-10 w-10 text-gold" />
+                    <h3 className="font-playfair text-2xl ml-4 tracking-wide">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-warm-gray">{service.description}</p>
                 </div>
-                <p className="text-warm-gray">{service.description}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
           ) : (
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   title: "Fireplaces",
-                  description: "Discover our extensive collection of modern and traditional fireplaces that combine elegance with efficient heating.",
+                  description:
+                    "Discover our extensive collection of modern and traditional fireplaces that combine elegance with efficient heating.",
                   icon: Flame,
                 },
                 {
                   title: "Fireplace Inserts",
-                  description: "Transform your existing fireplace with our energy-efficient inserts, designed to enhance both aesthetics and heating performance.",
+                  description:
+                    "Transform your existing fireplace with our energy-efficient inserts, designed to enhance both aesthetics and heating performance.",
                   icon: SprayCan,
                 },
                 {
                   title: "Stoves",
-                  description: "Browse our selection of wood, gas, and pellet stoves that offer both style and superior heating capabilities.",
+                  description:
+                    "Browse our selection of wood, gas, and pellet stoves that offer both style and superior heating capabilities.",
                   icon: Home,
                 },
                 {
                   title: "Mantles",
-                  description: "Elevate your fireplace with our custom-crafted mantles, available in various materials and designs to match your décor.",
+                  description:
+                    "Elevate your fireplace with our custom-crafted mantles, available in various materials and designs to match your décor.",
                   icon: Building2,
                 },
                 {
                   title: "Outdoor Living",
-                  description: "Create the perfect outdoor living space with our range of fire pits, outdoor fireplaces, and cooking solutions.",
+                  description:
+                    "Create the perfect outdoor living space with our range of fire pits, outdoor fireplaces, and cooking solutions.",
                   icon: Umbrella,
                 },
               ].map((product, index) => (
