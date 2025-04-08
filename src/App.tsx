@@ -169,17 +169,28 @@ function App() {
       </nav>
 
       <section id="home" className="relative h-screen">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/images/fireVideo.mp4" type="video/mp4" />
-          <img src="/images/fireGif.gif" alt="Fireplace" className="absolute inset-0 w-full h-full object-cover" />
-        </video>
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/images/long_cta.jpg"
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLVideoElement;
+              target.style.display = 'none';
+              const fallbackImg = document.createElement('img');
+              fallbackImg.src = '/images/long_cta.jpg';
+              fallbackImg.className = 'absolute inset-0 w-full h-full object-cover';
+              target.parentElement?.appendChild(fallbackImg);
+            }}
+          >
+            <source src="/images/fireVideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/60" />
         <div className="relative h-full flex items-center">
@@ -386,7 +397,7 @@ function App() {
               Our Products
             </button>
           </div>
-          
+
           {activeTab === 'services' ? (
             <div className="grid md:grid-cols-3 gap-8">
             {[
