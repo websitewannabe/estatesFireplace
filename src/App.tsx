@@ -264,7 +264,7 @@ function App() {
       <section
         className="relative py-24"
         style={{
-          backgroundImage: 'url("/images/cta.png")',
+          backgroundImage: 'url("/images/feature_image.png")',
           backgroundSize: "100%",
           backgroundPosition: "center",
         }}
