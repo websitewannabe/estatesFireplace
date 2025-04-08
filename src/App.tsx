@@ -281,6 +281,7 @@ function App() {
           <a
             href="#contact"
             className="luxury-button inline-flex items-center space-x-2"
+            style={{ background: '#C14F33', backgroundImage: 'none' }}
           >
             <span>Schedule Your Consultation</span>
             <Flame className="h-5 w-5" />
