@@ -264,12 +264,12 @@ function App() {
       <section
         className="relative py-24"
         style={{
-          backgroundImage: 'url("/images/feature_image.png")',
-          backgroundSize: "100%",
+          backgroundImage: 'url("/images/cta.png")',
+          backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-[#FFD700]/80" />
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide">
             Ready to Transform Your Space?
