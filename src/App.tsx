@@ -183,7 +183,7 @@ function App() {
               target.style.display = "none";
             }}
           >
-            <source src="/images/fireVideo.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}images/fireVideo.mp4`} type="video/mp4" />
           </video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
