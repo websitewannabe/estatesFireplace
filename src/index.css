@@ -11,6 +11,11 @@
   
   body {
     @apply bg-black text-white;
+
+  .luxury-button {
+    @apply bg-gradient-to-r from-[#FFD700]/90 via-[#FFD700] to-[#FFD700]/90 text-black font-semibold py-4 px-8 hover:from-[#FFD700] hover:via-[#FFD700]/90 hover:to-[#FFD700] transition-all duration-500 transform hover:scale-[1.02] shadow-lg hover:shadow-[#FFD700]/20;
+  }
+
   }
 
   /* Elegant scrollbar styling */
