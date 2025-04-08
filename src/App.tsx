@@ -271,7 +271,7 @@ function App() {
       >
         <div className="absolute inset-0 bg-[#FFD700]/80" />
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide">
+          <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide text-black">
             Ready to Transform Your Space?
           </h2>
           <p className="text-warm-gray text-lg md:text-xl max-w-2xl mx-auto mb-8">
