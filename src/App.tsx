@@ -308,6 +308,10 @@ function App() {
             <a
               href="#contact"
               className="luxury-button inline-flex items-center space-x-2"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               <span>Schedule Consultation</span>
               <Flame className="h-5 w-5" />
