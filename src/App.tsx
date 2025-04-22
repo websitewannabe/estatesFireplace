@@ -610,7 +610,86 @@ function App() {
         </div>
       </section>
 
+      <section id="contact" className="py-20 px-6 bg-warm-gray/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title gold-underline mb-12">Contact Us</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <p className="text-warm-gray text-lg">
+                Get in touch with us for a free consultation about your
+                fireplace needs.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <Phone className="h-6 w-6 text-gold" />
+                  <span className="text-warm-gray">(215) 555-0123</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Mail className="h-6 w-6 text-gold" />
+                  <span className="text-warm-gray">
+                    info@estatesfireplace.com
+                  </span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <MapPin className="h-6 w-6 text-gold" />
+                  <span className="text-warm-gray">
+                    123 Elegance Drive, Southampton, PA 18966
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
+                  />
+                </div>
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
+                />
+              </div>
+              <div>
+                <textarea
+                  placeholder="Your Message"
+                  rows={4}
+                  className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50 resize-none"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="luxury-button w-full justify-center"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-black py-16 px-6 border-t border-gold/10">
+        {" "}
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <div className="space-y-6">
