@@ -45,32 +45,26 @@ function App() {
     {
       name: "Regency",
       logo: "/images/slider/regencyLogo.png",
-      image: "/images/slider/regencyImage.png",
     },
     {
       name: "Hampton",
       logo: "/images/slider/Hampton.png",
-      image: "/images/slider/hamptonImage.png",
     },
     {
       name: "MagraHearth",
       logo: "/images/slider/magraHearth.png",
-      image: "/images/slider/mhimage.jpg",
     },
     {
       name: "Mendota",
       logo: "/images/slider/Mendota.png",
-      image: "/images/slider/mendotaImage.png",
     },
     {
       name: "MFFire",
       logo: "/images/slider/mffire_logo.png",
-      image: "/images/slider/fire.jpg",
     },
     {
       name: "Hargrove",
       logo: "/images/slider/Hargrove.png",
-      image: "/images/slider/hargroveImage.png",
     },
   ];
 
@@ -183,7 +177,11 @@ function App() {
               target.style.display = "none";
             }}
           >
-            <source src={`${import.meta.env.BASE_URL}images/fireVideo.mp4`} type="video/mp4" />
+            <source
+              src={`https://dl.dropboxusercontent.com/scl/fi/cebb4z0xbtfqaq7ps0ibi/fireVideo.mp4?rlkey=uxh7pdjdrt4ffkbcozi7uvmdw&st=p1vhajzh
+`}
+              type="video/mp4"
+            />
           </video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
@@ -199,11 +197,11 @@ function App() {
                 </span>
               </h1>
               <p className="font-inter text-xl md:text-2xl max-w-2xl mb-8 text-gray-200">
-                Bespoke fireplace designs to light up your home with elegance
-                and warmth.
+                Fireplace designs to light up your home with elegance and
+                warmth.
               </p>
               <a href="#contact" className="luxury-button">
-                Schedule Consultation
+                Begin Your Journey
               </a>
             </div>
           </div>
@@ -238,7 +236,7 @@ function App() {
                 icon: Sparkles,
                 title: "3. Installation by Licensed Professional",
                 description:
-                  "The final step is to install your new fireplace. We will schedule an installation date and one of our expert installers will perform your installation. Your new fireplace is only 3 simple steps away!",
+                  "The final step is to install your new fireplace. We will schedule an installation date and one of our certified installers will perform your installation. Your new fireplace is only 3 simple steps away!",
               },
             ].map((step, index) => (
               <div key={index} className="relative group">
@@ -263,7 +261,7 @@ function App() {
               href="#contact"
               className="luxury-button inline-flex items-center space-x-2"
             >
-              <span>Begin Your Journey</span>
+              <span>Schedule Consultation</span>
               <Flame className="h-5 w-5" />
             </a>
           </div>
@@ -292,7 +290,7 @@ function App() {
             className="luxury-button inline-flex items-center space-x-2 text-white"
             style={{ background: "#000000", backgroundImage: "none" }}
           >
-            <span>Schedule Your Consultation</span>
+            <span>Choose Your Fireplace</span>
             <Flame className="h-5 w-5" />
           </a>
         </div>
@@ -409,6 +407,12 @@ function App() {
                   icon: Brush,
                 },
                 {
+                  title: "Gas Maintanence",
+                  description:
+                    "Ensure the longevity and appearance of your property with safe, professional gas line maintenance and surface cleaning. Our process protects both aesthetics and structural integrity—without causing damage.",
+                  icon: Home,
+                },
+                {
                   title: "Chimney Inspections",
                   description:
                     "Purchasing or selling a home? We offer certified chimney inspections!",
@@ -431,12 +435,6 @@ function App() {
                   description:
                     "Stay covered while enjoying the outdoors! With a selection of quality products, we are here to keep you cool.",
                   icon: Umbrella,
-                },
-                {
-                  title: "Propane Delivery",
-                  description:
-                    "Delivering to Bucks and Montgomery Counties, we sell propane tanks and offer propane delivery! Call 215-997-6880 for more information.",
-                  icon: Fuel,
                 },
                 {
                   title: "Pressure Washing",
