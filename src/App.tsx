@@ -332,19 +332,12 @@ function App() {
                     }`}
                     style={{ width: "33.333%" }}
                   >
-                    <div className="flex flex-col items-center px-4 space-y-4">
+                    <div className="flex flex-col items-center px-4">
                       <img
                         src={brand.logo}
                         alt={brand.name}
                         className="h-32 w-auto mx-auto object-contain"
                       />
-                      <div className="w-full h-96 overflow-hidden rounded-lg">
-                        <img
-                          src={brand.image}
-                          alt={`${brand.name} Example`}
-                          className="w-full h-full object-contain object-center"
-                        />
-                      </div>
                     </div>
                   </div>
                 ))}
