@@ -610,6 +610,26 @@ function App() {
         </div>
       </section>
 
+      <section className="bg-black/30 backdrop-blur-sm py-20 px-6 border-y border-gold/10">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title gold-underline text-center">Get In Touch</h2>
+          <p className="text-warm-gray text-center text-lg max-w-2xl mx-auto mb-12">
+            Ready to transform your space with a luxury fireplace? Schedule a consultation or share your vision with us.
+          </p>
+          <div className="w-full aspect-[3/2] md:aspect-[2/1] max-w-4xl mx-auto rounded-sm overflow-hidden border border-gold/10">
+            <iframe
+              src="YOUR_TYPEFORM_EMBED_URL"
+              className="w-full h-full"
+              allow="camera; microphone; autoplay; encrypted-media;"
+              style={{
+                border: "none",
+                background: "transparent"
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-black py-16 px-6 border-t border-gold/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
