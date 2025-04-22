@@ -639,51 +639,18 @@ function App() {
               </div>
             </div>
 
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
-                  />
-                </div>
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
+            <div className="bg-gray-900 p-8 rounded-lg border border-gray-700 order-1 md:order-2">
+              <h2 className="text-3xl font-bold mb-8 text-white">
+                Send Us a Message
+              </h2>
+              <div className="w-full h-[600px]">
+                <iframe
+                  src="https://bv6w3pwoi5y.typeform.com/to/ybV94KYd"
+                  style={{ width: "100%", height: "100%", border: "0" }}
+                  allow="camera; microphone; autoplay; encrypted-media;"
                 />
               </div>
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Your Message"
-                  rows={4}
-                  className="w-full px-4 py-3 bg-black/20 border border-gold/20 focus:border-gold/50 rounded-sm outline-none text-warm-gray placeholder-warm-gray/50 resize-none"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="luxury-button w-full justify-center"
-              >
-                Send Message
-              </button>
-            </form>
+            </div>
           </div>
         </div>
       </section>
