@@ -248,7 +248,7 @@ function App() {
                 Fireplace designs to light up your home with elegance and
                 warmth.
               </p>
-              <a href="#contact" className="luxury-button">
+              <a href="tel:2676850530" className="luxury-button">
                 Begin Your Journey
               </a>
             </div>
