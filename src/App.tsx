@@ -28,6 +28,27 @@ import {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const brands = [
+    { name: "Regency", logo: "/images/slider/regencyLogo.png", categories: ["wood", "gas", "electric"] },
+    { name: "Hampton", logo: "/images/slider/Hampton.png", categories: ["wood"] },
+    { name: "MagraHearth", logo: "/images/slider/magraHearth.png", categories: ["mantel"] },
+    { name: "Mendota", logo: "/images/slider/Mendota.png", categories: ["gas"] },
+    { name: "MFFire", logo: "/images/slider/mffire_logo.png", categories: ["wood"] },
+    { name: "Hargrove", logo: "/images/slider/Hargrove.png", categories: ["logset"] },
+    { name: "Kozy Heat", logo: "/images/slider/kozyHeat.png", categories: ["gas"] },
+    { name: "Warming Trends", logo: "/images/slider/warmingTrends.jpg", categories: ["outdoor"] },
+    { name: "Grand Canyon Gas Logs", logo: "/images/slider/grandCanyon.png", categories: ["logset"] },
+    { name: "Modern Flames", logo: "/images/slider/modernFlames.jpg", categories: ["electric"] },
+    { name: "Lexington Hearth", logo: "/images/slider/lexingtonHearth.jpg", categories: ["mantel"] },
+    { name: "Mantel Crete", logo: "/images/slider/mantelCrete.png", categories: ["mantel"] },
+    { name: "Sunair Awnings", logo: "/images/slider/sunairAwnings.png", categories: ["awning"] },
+    { name: "Dimplex", logo: "/images/slider/dimplex.svg", categories: ["electric"] },
+    { name: "Heat Shield", logo: "/images/slider/heatShield.svg", categories: ["service"] },
+    { name: "Ventis", logo: "/images/slider/ventis.webp", categories: ["service"] },
+    { name: "Morso", logo: "/images/slider/morso.png", categories: ["wood"] },
+    { name: "Hitzer", logo: "/images/slider/hitzer.png", categories: ["wood"] },
+  ];
+
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("services");
