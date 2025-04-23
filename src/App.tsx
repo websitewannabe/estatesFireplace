@@ -339,16 +339,14 @@ function App() {
             Create the perfect ambiance with a custom fireplace solution
             tailored to your home.
           </p>
-          <button
-              onClick={() => {
-                document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }}
-              className="luxury-button inline-flex items-center space-x-2 text-white"
-              style={{ background: "#000000", backgroundImage: "none" }}
-            >
+          <a
+            href="#contact-us"
+            className="luxury-button inline-flex items-center space-x-2 text-white"
+            style={{ background: "#000000", backgroundImage: "none" }}
+          >
             <span>Choose Your Fireplace</span>
             <Flame className="h-5 w-5" />
-          </button>
+          </a>
         </div>
       </section>
 
