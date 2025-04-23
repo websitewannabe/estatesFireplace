@@ -31,6 +31,7 @@ function App() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("services");
   const [activeFilter, setActiveFilter] = useState("all");
+  const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -369,23 +370,87 @@ function App() {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {brands
-              .filter(brand => 
-                activeFilter === "all" || brand.categories.includes(activeFilter)
-              )
-              .map((brand, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center p-6 bg-black/20 backdrop-blur-sm border border-gold/10 rounded-sm transition-all duration-300 hover:border-gold/30"
-                >
-                  <img
-                    src={brand.logo}
-                    alt={brand.name}
-                    className="h-24 w-auto object-contain"
+          <div className="relative">
+            <button
+              onClick={() => {
+                const filtered = brands.filter(brand => 
+                  activeFilter === "all" || brand.categories.includes(activeFilter)
+                );
+                setCurrentBrandIndex(prev => 
+                  prev === 0 ? filtered.length - 1 : prev - 1
+                );
+              }}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 backdrop-blur-sm border border-gold/10 rounded-full transition-all duration-300 hover:scale-110"
+              aria-label="Previous brand"
+            >
+              <ChevronLeft className="h-4 w-4 text-gold" />
+            </button>
+            <button
+              onClick={() => {
+                const filtered = brands.filter(brand => 
+                  activeFilter === "all" || brand.categories.includes(activeFilter)
+                );
+                setCurrentBrandIndex(prev => 
+                  prev === filtered.length - 1 ? 0 : prev + 1
+                );
+              }}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 backdrop-blur-sm border border-gold/10 rounded-full transition-all duration-300 hover:scale-110"
+              aria-label="Next brand"
+            >
+              <ChevronRight className="h-4 w-4 text-gold" />
+            </button>
+
+            <div className="overflow-hidden px-12">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{
+                  transform: `translateX(-${currentBrandIndex * (100 / 3)}%)`,
+                }}
+              >
+                {brands
+                  .filter(brand => 
+                    activeFilter === "all" || brand.categories.includes(activeFilter)
+                  )
+                  .map((brand, index) => (
+                    <div
+                      key={index}
+                      className={`flex-shrink-0 transition-all duration-500 ${
+                        Math.abs(index - currentBrandIndex) <= 1
+                          ? "opacity-100 scale-100"
+                          : "opacity-50 scale-90"
+                      }`}
+                      style={{ width: "33.333%" }}
+                    >
+                      <div className="flex flex-col items-center p-6 mx-4 bg-black/20 backdrop-blur-sm border border-gold/10 rounded-sm transition-all duration-300 hover:border-gold/30">
+                        <img
+                          src={brand.logo}
+                          alt={brand.name}
+                          className="h-24 w-auto object-contain"
+                        />
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+            <div className="flex justify-center space-x-1 mt-6">
+              {brands
+                .filter(brand => 
+                  activeFilter === "all" || brand.categories.includes(activeFilter)
+                )
+                .map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentBrandIndex(index)}
+                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                      index === currentBrandIndex
+                        ? "bg-gold w-4"
+                        : "bg-warm-gray/30 hover:bg-warm-gray/50"
+                    }`}
+                    aria-label={`Go to brand ${index + 1}`}
                   />
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
       </section>
