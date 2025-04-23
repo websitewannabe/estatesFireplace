@@ -31,6 +31,15 @@ function App() {
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("services");
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filteredBrands = brands.filter(brand => 
+    activeFilter === "all" || brand.categories.includes(activeFilter)
+  );
+
+  useEffect(() => {
+    setCurrentBrandIndex(0);
+  }, [activeFilter]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -295,6 +304,39 @@ function App() {
       <section className="py-20 px-6 bg-black/30 backdrop-blur-sm border-y border-gold/10">
         <div className="max-w-7xl mx-auto">
           <h2 className="section-title gold-underline mb-12">Our Brands</h2>
+          <div className="flex justify-center space-x-4 mb-8">
+            <button
+              onClick={() => setActiveFilter("all")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "all"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
+            >
+              All Brands
+            </button>
+            {[
+              { label: "Gas Fireplaces", value: "gas" },
+              { label: "Wood Fireplaces", value: "wood" },
+              { label: "Electric Fireplaces", value: "electric" },
+              { label: "Outdoor Fireplaces", value: "outdoor" },
+              { label: "Mantels", value: "mantel" },
+              { label: "Doors", value: "doors" },
+            ].map((filter) => (
+              <button
+                key={filter.value}
+                onClick={() => setActiveFilter(filter.value)}
+                className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                  activeFilter === filter.value
+                    ? "bg-gold text-black"
+                    : "bg-black/50 text-gold hover:bg-black/70"
+                } backdrop-blur-sm border border-gold/10`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+
           <div className="relative">
             <button
               onClick={prevBrand}
@@ -318,7 +360,7 @@ function App() {
                   transform: `translateX(-${currentBrandIndex * (100 / 3)}%)`,
                 }}
               >
-                {brands.map((brand, index) => (
+                {filteredBrands.map((brand, index) => (
                   <div
                     key={index}
                     className={`flex-shrink-0 transition-all duration-500 ${
