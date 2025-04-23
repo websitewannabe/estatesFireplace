@@ -306,15 +306,13 @@ function App() {
           </div>
 
           <div className="text-center mt-12">
-            <button
-              onClick={() => {
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+            <a
+              href="#contact"
               className="luxury-button inline-flex items-center space-x-2"
             >
               <span>Schedule Consultation</span>
               <Flame className="h-5 w-5" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
