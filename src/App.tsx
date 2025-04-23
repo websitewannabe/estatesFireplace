@@ -28,9 +28,9 @@ import {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("services");
+  const [activeFilter, setActiveFilter] = useState("all");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -294,66 +294,98 @@ function App() {
 
       <section className="py-20 px-6 bg-black/30 backdrop-blur-sm border-y border-gold/10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title gold-underline mb-12">Our Brands</h2>
-          <div className="relative">
+          <h2 className="section-title gold-underline mb-8">Our Brands</h2>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button
-              onClick={prevBrand}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 backdrop-blur-sm border border-gold/10 rounded-full transition-all duration-300 hover:scale-110"
-              aria-label="Previous brand"
+              onClick={() => setActiveFilter("all")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "all"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
             >
-              <ChevronLeft className="h-4 w-4 text-gold" />
+              All Brands
             </button>
             <button
-              onClick={nextBrand}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 backdrop-blur-sm border border-gold/10 rounded-full transition-all duration-300 hover:scale-110"
-              aria-label="Next brand"
+              onClick={() => setActiveFilter("outdoor")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "outdoor"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
             >
-              <ChevronRight className="h-4 w-4 text-gold" />
+              Outdoor Fireplaces
             </button>
+            <button
+              onClick={() => setActiveFilter("gas")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "gas"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
+            >
+              Gas Fireplaces
+            </button>
+            <button
+              onClick={() => setActiveFilter("wood")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "wood"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
+            >
+              Wood Fireplaces
+            </button>
+            <button
+              onClick={() => setActiveFilter("electric")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "electric"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
+            >
+              Electric Fireplaces
+            </button>
+            <button
+              onClick={() => setActiveFilter("mantel")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "mantel"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
+            >
+              Mantels
+            </button>
+            <button
+              onClick={() => setActiveFilter("doors")}
+              className={`px-4 py-2 rounded-sm transition-all duration-300 ${
+                activeFilter === "doors"
+                  ? "bg-gold text-black"
+                  : "bg-black/50 text-gold hover:bg-black/70"
+              } backdrop-blur-sm border border-gold/10`}
+            >
+              Doors
+            </button>
+          </div>
 
-            <div className="overflow-hidden px-12">
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{
-                  transform: `translateX(-${currentBrandIndex * (100 / 3)}%)`,
-                }}
-              >
-                {brands.map((brand, index) => (
-                  <div
-                    key={index}
-                    className={`flex-shrink-0 transition-all duration-500 ${
-                      Math.abs(index - currentBrandIndex) <= 1
-                        ? "opacity-100 scale-100"
-                        : "opacity-50 scale-90"
-                    }`}
-                    style={{ width: "33.333%" }}
-                  >
-                    <div className="flex flex-col items-center px-4">
-                      <img
-                        src={brand.logo}
-                        alt={brand.name}
-                        className="h-32 w-auto mx-auto object-contain"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex justify-center space-x-1 mt-6">
-              {brands.map((_, index) => (
-                <button
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {brands
+              .filter(brand => 
+                activeFilter === "all" || brand.categories.includes(activeFilter)
+              )
+              .map((brand, index) => (
+                <div
                   key={index}
-                  onClick={() => setCurrentBrandIndex(index)}
-                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                    index === currentBrandIndex
-                      ? "bg-gold w-4"
-                      : "bg-warm-gray/30 hover:bg-warm-gray/50"
-                  }`}
-                  aria-label={`Go to brand ${index + 1}`}
-                />
+                  className="flex flex-col items-center p-6 bg-black/20 backdrop-blur-sm border border-gold/10 rounded-sm transition-all duration-300 hover:border-gold/30"
+                >
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="h-24 w-auto object-contain"
+                  />
+                </div>
               ))}
-            </div>
           </div>
         </div>
       </section>
