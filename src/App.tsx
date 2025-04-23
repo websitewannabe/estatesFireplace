@@ -42,80 +42,27 @@ function App() {
   }, []);
 
   const brands = [
-    {
-      name: "Regency",
-      logo: "/images/slider/regencyLogo.png",
-      product: "",
-    },
-    {
-      name: "Hampton",
-      logo: "/images/slider/Hampton.png",
-    },
-    {
-      name: "MagraHearth",
-      logo: "/images/slider/magraHearth.png",
-    },
-    {
-      name: "Mendota",
-      logo: "/images/slider/Mendota.png",
-    },
-    {
-      name: "MFFire",
-      logo: "/images/slider/mffire_logo.png",
-    },
-    {
-      name: "Hargrove",
-      logo: "/images/slider/Hargrove.png",
-    },
-    {
-      name: "Kozy Heat",
-      logo: "/images/slider/kozyHeat.png",
-    },
-    {
-      name: "Warming Trends",
-      logo: "/images/slider/warmingTrends.jpg",
-    },
-    {
-      name: "Grand Canyon GGas Logs",
-      logo: "/images/slider/grandCanyon.png",
-    },
-    {
-      name: "Modern Flames",
-      logo: "/images/slider/modernFlames.jpg",
-    },
-    {
-      name: "Lexington Hearth",
-      logo: "/images/slider/lexingtonHearth.jpg",
-    },
-    {
-      name: "Mantel Crete",
-      logo: "/images/slider/mantelCrete.png",
-    },
-    {
-      name: "Sunair Awnings",
-      logo: "/images/slider/sunairAwnings.png",
-    },
-    {
-      name: "Dimplex",
-      logo: "/images/slider/dimplex.svg",
-    },
-    {
-      name: "Heat Shield",
-      logo: "/images/slider/heatShield.svg",
-    },
-    {
-      name: "Ventis",
-      logo: "/images/slider/ventis.webp",
-    },
-    {
-      name: "Morso",
-      logo: "/images/slider/morso.png",
-    },
-    {
-      name: "Hitzer",
-      logo: "/images/slider/hitzer.png",
-    },
+    { name: "Regency", logo: "/images/slider/regencyLogo.png", categories: ["wood", "gas", "electric"] },
+    { name: "Hampton", logo: "/images/slider/Hampton.png", categories: ["wood"] },
+    { name: "MagraHearth", logo: "/images/slider/magraHearth.png", categories: ["mantel"] },
+    { name: "Mendota", logo: "/images/slider/Mendota.png", categories: ["gas"] },
+    { name: "MFFire", logo: "/images/slider/mffire_logo.png", categories: ["wood"] },
+    { name: "Hargrove", logo: "/images/slider/Hargrove.png", categories: ["logset"] },
+    { name: "Kozy Heat", logo: "/images/slider/kozyHeat.png", categories: ["gas"] },
+    { name: "Warming Trends", logo: "/images/slider/warmingTrends.jpg", categories: ["outdoor"] },
+    { name: "Grand Canyon GGas Logs", logo: "/images/slider/grandCanyon.png", categories: ["logset"] },
+    { name: "Modern Flames", logo: "/images/slider/modernFlames.jpg", categories: ["electric"] },
+    { name: "Lexington Hearth", logo: "/images/slider/lexingtonHearth.jpg", categories: ["mantel"] },
+    { name: "Mantel Crete", logo: "/images/slider/mantelCrete.png", categories: ["mantel"] },
+    { name: "Sunair Awnings", logo: "/images/slider/sunairAwnings.png", categories: ["awning"] },
+    { name: "Dimplex", logo: "/images/slider/dimplex.svg", categories: ["electric"] },
+    { name: "Heat Shield", logo: "/images/slider/heatShield.svg", categories: ["service"] },
+    { name: "Ventis", logo: "/images/slider/ventis.webp", categories: ["service"] },
+    { name: "Morso", logo: "/images/slider/morso.png", categories: ["wood"] },
+    { name: "Hitzer", logo: "/images/slider/hitzer.png", categories: ["wood"] },
   ];
+
+  const categories = ["all", "wood", "gas", "electric", "mantel", "logset", "outdoor", "awning", "service"];
 
   const nextBrand = () => {
     setCurrentBrandIndex((prevIndex) =>
@@ -307,7 +254,7 @@ function App() {
 
           <div className="text-center mt-12">
             <a
-              href="#"
+              href="#contact"
               className="luxury-button inline-flex items-center space-x-2"
             >
               <span>Schedule Consultation</span>
@@ -611,7 +558,7 @@ function App() {
         </div>
       </section>
 
-      <section className="scroll-mt-28 py-20 px-6 bg-warm-gray/5">
+      <section id="contact" className="scroll-mt-28 py-20 px-6 bg-warm-gray/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="section-title gold-underline mb-12">Contact Us</h2>
           <div className="grid md:grid-cols-2 gap-12">
