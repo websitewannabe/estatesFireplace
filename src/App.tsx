@@ -646,9 +646,11 @@ function App() {
               </h2>
               <div className="w-full h-[600px]">
                 <iframe
-                  src="https://bv6w3pwoi5y.typeform.com/to/ybV94KYd"
+                  src="https://bv6w3pwoi5y.typeform.com/to/ybV94KYd#embed=scroll"
                   style={{ width: "100%", height: "100%", border: "0" }}
                   allow="camera; microphone; autoplay; encrypted-media;"
+                  data-qa="iframe-container"
+                  loading="lazy"
                 />
               </div>
             </div>
