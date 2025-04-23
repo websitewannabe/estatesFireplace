@@ -306,13 +306,18 @@ function App() {
           </div>
 
           <div className="text-center mt-12">
-            <a
-              href="#contact"
+            <button
+              onClick={() => {
+                const target = document.getElementById("contact-us");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
               className="luxury-button inline-flex items-center space-x-2"
             >
               <span>Schedule Consultation</span>
               <Flame className="h-5 w-5" />
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -335,7 +340,7 @@ function App() {
             tailored to your home.
           </p>
           <a
-            href="#contact"
+            href="#contact-us"
             className="luxury-button inline-flex items-center space-x-2 text-white"
             style={{ background: "#000000", backgroundImage: "none" }}
           >
@@ -611,7 +616,10 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-6 bg-warm-gray/5">
+      <section
+        id="contact-us"
+        className="scroll-mt-28 py-20 px-6 bg-warm-gray/5"
+      >
         <div className="max-w-7xl mx-auto">
           <h2 className="section-title gold-underline mb-12">Contact Us</h2>
           <div className="grid md:grid-cols-2 gap-12">
