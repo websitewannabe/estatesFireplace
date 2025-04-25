@@ -16,4 +16,4 @@ to = "/index.html"
 
 [[ports]]
 localPort = 5173
-externalPort = 5173
+externalPort = 80
