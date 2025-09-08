@@ -818,6 +818,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 px-6 bg-warm-gray/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <Shield className="h-12 w-12 text-gold" />
+              </div>
+              <h4 className="font-playfair text-2xl mb-4">Licensed & Insured</h4>
+              <p className="text-warm-gray leading-relaxed">
+                Fully licensed and insured professionals ensure your project is completed safely.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <Award className="h-12 w-12 text-gold" />
+              </div>
+              <h4 className="font-playfair text-2xl mb-4">30+ Years Experience</h4>
+              <p className="text-warm-gray leading-relaxed">
+                Three decades of expertise in fireplace design, installation, and maintenance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="testimonials" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="section-title gold-underline">Client Testimonials</h2>
@@ -888,91 +915,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Team Preview */}
-          <div className="mb-16">
-            <h3 className="font-playfair text-3xl text-center mb-12 text-gold">Meet Our Team</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  name: "Michael Johnson",
-                  title: "Founder & Master Craftsman",
-                  image: "/images/team/noun-profile-3923720-FFFFFF.png",
-                  specialties: ["Custom Design", "Masonry", "Gas Systems"]
-                },
-                {
-                  name: "Sarah Williams", 
-                  title: "Design Director",
-                  image: "/images/team/noun-profile-3923720-FFFFFF.png",
-                  specialties: ["Interior Design", "Color Consultation", "Space Planning"]
-                },
-                {
-                  name: "David Chen",
-                  title: "Lead Installation Specialist", 
-                  image: "/images/team/noun-profile-3923720-FFFFFF.png",
-                  specialties: ["Installation", "Safety Systems", "Maintenance"]
-                },
-                {
-                  name: "Lisa Rodriguez",
-                  title: "Customer Experience Manager",
-                  image: "/images/team/noun-profile-3923720-FFFFFF.png", 
-                  specialties: ["Client Relations", "Project Management", "Quality Assurance"]
-                }
-              ].map((member, index) => (
-                <div key={index} className="text-center">
-                  <div className="relative overflow-hidden rounded-sm mb-4">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full max-h-40 object-contain"
-                    />
-                  </div>
-                  <h4 className="font-playfair text-xl mb-2 text-white">{member.name}</h4>
-                  <p className="text-gold text-sm">{member.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <a
-                href="/about-us"
-                className="text-gold hover:text-gold/80 transition-colors duration-300 font-medium"
-              >
-                View Full Team →
-              </a>
-            </div>
-          </div>
 
-          {/* Why Choose Us */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Award className="h-12 w-12 text-gold" />
-              </div>
-              <h4 className="font-playfair text-2xl mb-4">30+ Years Experience</h4>
-              <p className="text-warm-gray leading-relaxed">
-                Three decades of expertise in fireplace design, installation, and maintenance.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Shield className="h-12 w-12 text-gold" />
-              </div>
-              <h4 className="font-playfair text-2xl mb-4">Licensed & Insured</h4>
-              <p className="text-warm-gray leading-relaxed">
-                Fully licensed and insured professionals ensure your project is completed safely.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Star className="h-12 w-12 text-gold" />
-              </div>
-              <h4 className="font-playfair text-2xl mb-4">Award-Winning Service</h4>
-              <p className="text-warm-gray leading-relaxed">
-                Recognized for excellence in customer service and craftsmanship.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
