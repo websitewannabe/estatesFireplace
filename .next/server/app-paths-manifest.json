@@ -1,7 +1,21 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/awnings/page": "app/awnings/page.js",
   "/about-us/page": "app/about-us/page.js",
-  "/services/page": "app/services/page.js",
   "/page": "app/page.js",
-  "/services/chimney-sweeps/page": "app/services/chimney-sweeps/page.js",
-  "/reviews/page": "app/reviews/page.js"
+  "/products/fireplace-inserts/page": "app/products/fireplace-inserts/page.js",
+  "/portfolio/page": "app/portfolio/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
+  "/accessibility-statement/page": "app/accessibility-statement/page.js",
+  "/products/fireplaces/page": "app/products/fireplaces/page.js",
+  "/products/mantels/page": "app/products/mantels/page.js",
+  "/products/outdoor-living/page": "app/products/outdoor-living/page.js",
+  "/services/chimney-inspections/page": "app/services/chimney-inspections/page.js",
+  "/services/chimney-linings/page": "app/services/chimney-linings/page.js",
+  "/services/gas-maintenance/page": "app/services/gas-maintenance/page.js",
+  "/reviews/page": "app/reviews/page.js",
+  "/products/stoves/page": "app/products/stoves/page.js",
+  "/services/page": "app/services/page.js",
+  "/services/masonry/page": "app/services/masonry/page.js",
+  "/services/chimney-sweeps/page": "app/services/chimney-sweeps/page.js"
 }

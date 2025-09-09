@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import {Flame,
   Phone,
   Mail,
@@ -22,6 +22,7 @@ import {Flame,
 } from "lucide-react";
 
 export default function OutdoorLivingPage() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const outdoorProducts = [
     {

@@ -1,1 +1,174 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[{"source":"/images/:path*","destination":"/public/images/:path*","regex":"^\\/images(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))?(?:\\/)?$","check":true}],"fallback":[]},"redirects":[{"source":"/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/","destination":"/:file","permanent":true,"internal":true,"missing":[{"type":"header","key":"x-nextjs-data"}],"regex":"^(?:\\/((?!\\.well-known(?:\\/.*)?)(?:[^/]+\\/)*[^/]+\\.\\w+))\\/$"},{"source":"/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)","destination":"/:notfile/","permanent":true,"internal":true,"regex":"^(?:\\/((?!\\.well-known(?:\\/.*)?)(?:[^/]+\\/)*[^/\\.]+))$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
+      "destination": "/:file",
+      "internal": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-nextjs-data"
+        }
+      ],
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+    },
+    {
+      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
+      "destination": "/:notfile/",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [
+      {
+        "source": "/images/:path*",
+        "destination": "/public/images/:path*",
+        "regex": "^/images(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+      }
+    ],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/accessibility-statement",
+      "regex": "^/accessibility\\-statement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/accessibility\\-statement(?:/)?$"
+    },
+    {
+      "page": "/awnings",
+      "regex": "^/awnings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/awnings(?:/)?$"
+    },
+    {
+      "page": "/contact-us",
+      "regex": "^/contact\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact\\-us(?:/)?$"
+    },
+    {
+      "page": "/portfolio",
+      "regex": "^/portfolio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/portfolio(?:/)?$"
+    },
+    {
+      "page": "/products/fireplace-inserts",
+      "regex": "^/products/fireplace\\-inserts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/fireplace\\-inserts(?:/)?$"
+    },
+    {
+      "page": "/products/fireplaces",
+      "regex": "^/products/fireplaces(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/fireplaces(?:/)?$"
+    },
+    {
+      "page": "/products/mantels",
+      "regex": "^/products/mantels(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/mantels(?:/)?$"
+    },
+    {
+      "page": "/products/outdoor-living",
+      "regex": "^/products/outdoor\\-living(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/outdoor\\-living(?:/)?$"
+    },
+    {
+      "page": "/products/stoves",
+      "regex": "^/products/stoves(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/stoves(?:/)?$"
+    },
+    {
+      "page": "/reviews",
+      "regex": "^/reviews(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reviews(?:/)?$"
+    },
+    {
+      "page": "/services",
+      "regex": "^/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services(?:/)?$"
+    },
+    {
+      "page": "/services/chimney-inspections",
+      "regex": "^/services/chimney\\-inspections(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/chimney\\-inspections(?:/)?$"
+    },
+    {
+      "page": "/services/chimney-linings",
+      "regex": "^/services/chimney\\-linings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/chimney\\-linings(?:/)?$"
+    },
+    {
+      "page": "/services/chimney-sweeps",
+      "regex": "^/services/chimney\\-sweeps(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/chimney\\-sweeps(?:/)?$"
+    },
+    {
+      "page": "/services/gas-maintenance",
+      "regex": "^/services/gas\\-maintenance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/gas\\-maintenance(?:/)?$"
+    },
+    {
+      "page": "/services/masonry",
+      "regex": "^/services/masonry(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/masonry(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

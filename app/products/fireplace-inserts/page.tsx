@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import {Flame,
   Phone,
   Mail,
@@ -20,6 +20,7 @@ import {Flame,
 } from "lucide-react";
 
 export default function FireplaceInsertsPage() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const insertTypes = [
     {
