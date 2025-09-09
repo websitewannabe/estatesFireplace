@@ -30,21 +30,21 @@ export default function OutdoorLivingPage() {
       icon: Flame,
       description: "Create a stunning focal point in your outdoor space with our custom outdoor fireplaces designed for year-round enjoyment.",
       features: ["Weather resistant", "Custom design", "Gas or wood options", "Professional installation"],
-      image: "/images/portfolio/port1.png"
+      image: "/images/Outdoor Living/scalled_10_Warming_Trends_Firepit_2.jpg"
     },
     {
       name: "Fire Pits",
       icon: Sun,
       description: "Gather around our beautiful fire pits that provide warmth and ambiance for your outdoor gatherings.",
       features: ["Portable options", "Permanent installation", "Multiple fuel types", "Safety features"],
-      image: "/images/portfolio/port2.png"
+      image: "/images/Outdoor Living/scalled_22_Cove_Outdoor_Firepit.jpg"
     },
     {
       name: "Outdoor Kitchens",
       icon: Home,
       description: "Complete your outdoor living space with our custom outdoor kitchens featuring built-in grills and prep areas.",
       features: ["Built-in grills", "Prep surfaces", "Storage solutions", "Weather protection"],
-      image: "/images/portfolio/port3.jpg"
+      image: "/images/Outdoor Living/scalled_16_Emily_Rose_Lakewood_Collection-scaled-1.jpg"
     }
   ];
 
@@ -75,7 +75,7 @@ export default function OutdoorLivingPage() {
           <div 
             className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: 'url("/images/portfolio/port2.png")',
+              backgroundImage: 'url("/images/Outdoor Living/scalled_8_Warming_Trends_Outdoor_Firepit.jpg")',
             }}
           />
         </div>
@@ -155,6 +155,105 @@ export default function OutdoorLivingPage() {
         </div>
       </section>
 
+      {/* Image Gallery */}
+      <section className="py-20 px-6 bg-warm-gray/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title gold-underline mb-16">Our Outdoor Living Gallery</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="group relative overflow-hidden rounded-lg">
+              <img
+                src="/images/Outdoor Living/imgi_39_Warming_Trends_Outdoor_Firepit-300x200.jpg"
+                alt="Warming Trends Outdoor Firepit"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-playfair text-lg font-semibold">Warming Trends Firepit</h3>
+                  <p className="text-sm text-gray-200">Custom outdoor firepit installation</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img
+                src="/images/Outdoor Living/imgi_41_Warming_Trends_Firepit_2-300x225.jpg"
+                alt="Warming Trends Firepit Design"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-playfair text-lg font-semibold">Modern Firepit Design</h3>
+                  <p className="text-sm text-gray-200">Contemporary outdoor living space</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img
+                src="/images/Outdoor Living/imgi_47_Emily_Rose_Lakewood_Collection-scaled-1-300x221.jpg"
+                alt="Emily Rose Lakewood Collection"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-playfair text-lg font-semibold">Lakewood Collection</h3>
+                  <p className="text-sm text-gray-200">Premium outdoor fireplace design</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img
+                src="/images/Outdoor Living/imgi_49_Cove_Outdoor_Firepit-300x200.jpg"
+                alt="Cove Outdoor Firepit"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-playfair text-lg font-semibold">Cove Firepit</h3>
+                  <p className="text-sm text-gray-200">Elegant outdoor fire feature</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img
+                src="/images/Outdoor Living/imgi_21_highland-hearth-install-2015.jpg"
+                alt="Highland Hearth Installation"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-playfair text-lg font-semibold">Highland Hearth</h3>
+                  <p className="text-sm text-gray-200">Professional installation project</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-lg">
+              <img
+                src="/images/Outdoor Living/imgi_25_2021-Outdoor-Blog-1-Outdoor-Custom-Firetable-240x300.jpg"
+                alt="Custom Outdoor Firetable"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="font-playfair text-lg font-semibold">Custom Firetable</h3>
+                  <p className="text-sm text-gray-200">Bespoke outdoor dining experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a href="/portfolio" className="luxury-button bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-black">
+              View Full Portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Design Process */}
       <section className="py-20 px-6 bg-warm-gray/5">
         <div className="max-w-7xl mx-auto">
@@ -182,7 +281,7 @@ export default function OutdoorLivingPage() {
             </div>
             <div className="relative">
               <img
-                src="/images/portfolio/port3.jpg"
+                src="/images/Outdoor Living/scalled_9_Estates_Chimney_Test_outdoor_image.jpg"
                 alt="Custom outdoor living design"
                 className="w-full h-96 object-cover rounded-lg"
               />
