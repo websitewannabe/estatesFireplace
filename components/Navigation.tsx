@@ -184,6 +184,12 @@ export default function Navigation() {
               )}
             </div>
             <a
+              href="/portfolio"
+              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
+            >
+              Portfolio
+            </a>
+            <a
               href="/about-us"
               className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
             >
@@ -279,6 +285,9 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
+              <a href="/portfolio" className="nav-link">
+                Portfolio
+              </a>
               <a href="/about-us" className="nav-link">
                 About Us
               </a>

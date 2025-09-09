@@ -16,8 +16,10 @@ import {Flame,
   Star,
   Wrench,
   Search,
-  Zap,Facebook,
+  Zap,
+  Facebook,
   Instagram,
+  X,
 } from "lucide-react";
 
 export default function ServicesPage() {
@@ -321,7 +323,7 @@ export default function ServicesPage() {
               className="absolute top-4 right-4 z-10 p-2 text-warm-gray hover:text-gold transition-colors duration-300"
               aria-label="Close contact form"
             >
-              <className="h-6 w-6" />
+              <X className="h-6 w-6" />
             </button>
 
             <div className="p-8">

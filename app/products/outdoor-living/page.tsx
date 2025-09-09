@@ -8,7 +8,8 @@ import {Flame,
   Clock,
   Award,
   Shield,
-  Star,Zap,
+  Star,
+  Zap,
   Droplets,
   TreePine,
   Sparkles,
@@ -17,6 +18,7 @@ import {Flame,
   Umbrella,
   Facebook,
   Instagram,
+  X,
 } from "lucide-react";
 
 export default function OutdoorLivingPage() {
@@ -228,7 +230,7 @@ export default function OutdoorLivingPage() {
               className="absolute top-4 right-4 z-10 p-2 text-warm-gray hover:text-gold transition-colors duration-300"
               aria-label="Close contact form"
             >
-              <className="h-6 w-6" />
+              <X className="h-6 w-6" />
             </button>
 
             <div className="p-8">

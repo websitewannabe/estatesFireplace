@@ -73,7 +73,7 @@ export default function AboutUsPage() {
   ];
 
   return (
-
+    <>
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-rich-black">
         <div className="relative h-full flex items-center">
@@ -250,18 +250,16 @@ export default function AboutUsPage() {
           <p className="text-gray-800 text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Let our experienced team help you create the perfect fireplace for your home.
           </p>
-          <button
-            onClick={() => setIsContactOpen(true)}
+          <a
+            href="/contact-us"
             className="luxury-button inline-flex items-center space-x-2 text-white"
             style={{ background: "#000000", backgroundImage: "none" }}
           >
             <span>Get Started Today</span>
             <Flame className="h-5 w-5" />
-          </button>
+          </a>
         </div>
       </section>
-
-
-    </div>
+    </>
   );
 }

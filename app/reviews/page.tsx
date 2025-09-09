@@ -8,13 +8,17 @@ import {Flame,
   Clock,
   Award,
   Shield,
-  Star,Quote,
+  Star,
+  Quote,
   Calendar,
   User,
   ThumbsUp,
   CheckCircle,
   Facebook,
   Instagram,
+  ChevronLeft,
+  ChevronRight,
+  X,
 } from "lucide-react";
 
 export default function ReviewsPage() {
@@ -147,14 +151,14 @@ export default function ReviewsPage() {
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-black/50 hover:bg-black/70 backdrop-blur-sm border border-gold/10 rounded-full transition-all duration-300 hover:scale-110"
               aria-label="Previous review"
             >
-              <className="h-6 w-6 text-gold" />
+              <ChevronLeft className="h-6 w-6 text-gold" />
             </button>
             <button
               onClick={nextReview}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-black/50 hover:bg-black/70 backdrop-blur-sm border border-gold/10 rounded-full transition-all duration-300 hover:scale-110"
               aria-label="Next review"
             >
-              <className="h-6 w-6 text-gold" />
+              <ChevronRight className="h-6 w-6 text-gold" />
             </button>
 
             <div className="overflow-hidden px-16">
@@ -342,7 +346,7 @@ export default function ReviewsPage() {
               className="absolute top-4 right-4 z-10 p-2 text-warm-gray hover:text-gold transition-colors duration-300"
               aria-label="Close contact form"
             >
-              <className="h-6 w-6" />
+              <X className="h-6 w-6" />
             </button>
 
             <div className="p-8">
