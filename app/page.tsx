@@ -54,7 +54,7 @@ export default function HomePage() {
 
 
   return (
-
+    <>
       <section id="home" className="relative h-screen">
         <div className="absolute inset-0 w-full h-full">
           <video
@@ -71,8 +71,7 @@ export default function HomePage() {
             }}
           >
             <source
-              src={`https://dl.dropboxusercontent.com/scl/fi/cebb4z0xbtfqaq7ps0ibi/fireVideo.mp4?rlkey=uxh7pdjdrt4ffkbcozi7uvmdw&st=p1vhajzh
-`}
+              src={`https://dl.dropboxusercontent.com/scl/fi/cebb4z0xbtfqaq7ps0ibi/fireVideo.mp4?rlkey=uxh7pdjdrt4ffkbcozi7uvmdw&st=p1vhajzh`}
               type="video/mp4"
             />
           </video>
@@ -150,13 +149,13 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <button
-              onClick={() => setIsContactOpen(true)}
+            <a
+              href="/contact-us"
               className="luxury-button inline-flex items-center space-x-2"
             >
               <span>Schedule Consultation</span>
               <Flame className="h-5 w-5" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -627,6 +626,6 @@ export default function HomePage() {
 
         </div>
       </section>
-
+    </>
   );
 }
