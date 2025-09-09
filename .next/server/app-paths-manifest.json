@@ -1,6 +1,6 @@
 {
-  "/services/page": "app/services/page.js",
   "/about-us/page": "app/about-us/page.js",
+  "/services/page": "app/services/page.js",
   "/page": "app/page.js",
   "/services/chimney-sweeps/page": "app/services/chimney-sweeps/page.js",
   "/reviews/page": "app/reviews/page.js"
