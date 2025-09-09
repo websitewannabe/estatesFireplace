@@ -174,7 +174,7 @@ export default function MantelsPage() {
                 <a href="tel:2676850530" className="luxury-button">
                   Start Design Process
                 </a>
-                <a href="/reviews" className="luxury-button bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-black">
+                <a href="/portfolio" className="luxury-button bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-black">
                   View Gallery
                 </a>
               </div>
