@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import {Phone,
   Mail,
   MapPin,
@@ -15,6 +15,7 @@ import {Phone,
 } from "lucide-react";
 
 export default function ContactUsPage() {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const contactInfo = [
     {
