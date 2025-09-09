@@ -123,11 +123,11 @@ export default function ServicesPage() {
 
             <div className="bg-warm-gray/5 p-6 rounded-lg border border-gold/10 group hover:border-gold/30 transition-all duration-300">
               <div className="flex items-center mb-4">
-                <Wrench className="h-10 w-10 text-gold mr-4" />
-                <h3 className="font-playfair text-xl text-gold">Gas Maintenance</h3>
+                <Shield className="h-10 w-10 text-gold mr-4" />
+                <h3 className="font-playfair text-xl text-gold">Caps & Screens</h3>
               </div>
               <p className="text-warm-gray text-sm leading-relaxed">
-                Ensure the longevity and appearance of your property with safe, professional gas line maintenance and surface cleaning. Our process protects both aesthetics and structural integrity.
+                Protect your chimney from weather, debris, and animals with professional chimney cap and screen installation. Keep your chimney safe and well-ventilated year-round.
               </p>
             </div>
 
@@ -192,11 +192,11 @@ export default function ServicesPage() {
 
             <div className="bg-warm-gray/5 p-8 rounded-lg border border-gold/10">
               <div className="flex items-center mb-6">
-                <Wrench className="h-12 w-12 text-gold mr-4" />
-                <h3 className="font-playfair text-2xl text-gold">Gas Line Maintenance</h3>
+                <Shield className="h-12 w-12 text-gold mr-4" />
+                <h3 className="font-playfair text-2xl text-gold">Chimney Caps & Screens</h3>
               </div>
               <p className="text-warm-gray leading-relaxed">
-                Our gas maintenance service includes inspection of gas lines, cleaning of gas logs and burners, and testing of safety systems. We ensure your gas fireplace operates efficiently and safely while maintaining its aesthetic appeal.
+                Our chimney cap and screen installation service provides essential protection for your chimney. We install custom-fitted caps and durable screens that prevent water damage, debris buildup, and animal intrusion while maintaining proper ventilation.
               </p>
             </div>
           </div>

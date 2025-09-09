@@ -20,9 +20,11 @@ import {Flame,
   Facebook,
   Instagram,
   X,
+  Wind,
+  Eye,
 } from "lucide-react";
 
-export default function GasMaintenancePage() {
+export default function CapsScreensPage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
@@ -36,13 +38,13 @@ export default function GasMaintenancePage() {
         <div className="relative h-full flex items-center justify-center text-center px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-wide">
-              <span className="text-white">Gas </span>
+              <span className="text-white">Caps & </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold/80 via-gold to-gold/80">
-                Maintenance
+                Screens
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-warm-gray mb-8 max-w-3xl mx-auto">
-              Professional gas fireplace maintenance services to ensure safe, efficient operation and optimal performance.
+              Professional chimney cap and screen installation to protect your chimney from weather, debris, and unwanted visitors.
             </p>
           </div>
         </div>
@@ -53,31 +55,31 @@ export default function GasMaintenancePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
-              <h2 className="section-title gold-underline mb-8">Expert Gas Fireplace Maintenance</h2>
+              <h2 className="section-title gold-underline mb-8">Expert Chimney Cap & Screen Services</h2>
               <p className="text-warm-gray text-lg mb-6 leading-relaxed">
-                Gas fireplaces require regular maintenance to operate safely and efficiently. Our certified technicians 
-                provide comprehensive gas fireplace maintenance services to keep your system running at peak performance.
+                Chimney caps and screens are essential for protecting your chimney from water damage, debris, and animal intrusion. 
+                Our professional installation services ensure your chimney stays protected year-round.
               </p>
               <p className="text-warm-gray text-lg mb-8 leading-relaxed">
-                From cleaning and inspection to component replacement and safety testing, we ensure your gas fireplace 
-                provides reliable warmth and comfort for years to come.
+                From custom-fitted caps to durable screens, we provide solutions that enhance both the functionality and 
+                appearance of your chimney while extending its lifespan.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-gold flex-shrink-0" />
-                  <span className="text-warm-gray">Complete system inspection</span>
+                  <span className="text-warm-gray">Custom-fitted chimney caps</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-gold flex-shrink-0" />
-                  <span className="text-warm-gray">Gas line safety testing</span>
+                  <span className="text-warm-gray">Durable spark arrestor screens</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-gold flex-shrink-0" />
-                  <span className="text-warm-gray">Component cleaning and adjustment</span>
+                  <span className="text-warm-gray">Weather protection</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-gold flex-shrink-0" />
-                  <span className="text-warm-gray">Efficiency optimization</span>
+                  <span className="text-warm-gray">Animal prevention</span>
                 </div>
               </div>
             </div>
@@ -85,7 +87,7 @@ export default function GasMaintenancePage() {
               <div className="aspect-square rounded-lg overflow-hidden">
                 <img
                   src="/images/slider/fire.jpg"
-                  alt="Gas fireplace maintenance professional at work"
+                  alt="Professional chimney cap installation"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -94,33 +96,33 @@ export default function GasMaintenancePage() {
 
           {/* Process Section */}
           <div className="mb-20">
-            <h2 className="section-title gold-underline mb-12 text-center">Our Gas Maintenance Process</h2>
+            <h2 className="section-title gold-underline mb-12 text-center">Our Installation Process</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Search className="h-8 w-8 text-gold" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">1. Safety Inspection</h3>
+                <h3 className="text-xl font-bold text-white mb-4">1. Assessment</h3>
                 <p className="text-warm-gray">
-                  We thoroughly inspect all gas components, connections, and safety systems to ensure everything is functioning properly.
+                  We inspect your chimney to determine the best cap and screen solution for your specific needs and chimney type.
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Wrench className="h-8 w-8 text-gold" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">2. Maintenance & Cleaning</h3>
+                <h3 className="text-xl font-bold text-white mb-4">2. Installation</h3>
                 <p className="text-warm-gray">
-                  Clean all components, adjust settings, and perform necessary maintenance to optimize performance and efficiency.
+                  Professional installation of your chimney cap and screen with proper sealing and weatherproofing.
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="h-8 w-8 text-gold" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">3. Safety Testing</h3>
+                <h3 className="text-xl font-bold text-white mb-4">3. Protection</h3>
                 <p className="text-warm-gray">
-                  Test all safety systems, gas flow, and ignition to ensure your fireplace operates safely and reliably.
+                  Your chimney is now protected from weather, debris, and animals while maintaining proper ventilation.
                 </p>
               </div>
             </div>
@@ -128,44 +130,44 @@ export default function GasMaintenancePage() {
 
           {/* Benefits Section */}
           <div className="bg-gray-900/50 rounded-2xl p-12">
-            <h2 className="section-title gold-underline mb-8 text-center">Benefits of Regular Gas Maintenance</h2>
+            <h2 className="section-title gold-underline mb-8 text-center">Benefits of Chimney Caps & Screens</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <Shield className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Safety Assurance</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">Weather Protection</h3>
                     <p className="text-warm-gray">
-                      Regular maintenance prevents gas leaks, carbon monoxide issues, and other safety hazards.
+                      Prevent water damage, snow, and ice from entering your chimney and causing costly repairs.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Zap className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
+                  <Wind className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Optimal Performance</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">Draft Control</h3>
                     <p className="text-warm-gray">
-                      Well-maintained gas fireplaces provide consistent heat output and better energy efficiency.
+                      Maintain proper airflow while preventing downdrafts that can cause smoke issues.
                     </p>
                   </div>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Award className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
+                  <Eye className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Extended Lifespan</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">Debris Prevention</h3>
                     <p className="text-warm-gray">
-                      Regular maintenance extends the life of your gas fireplace system and prevents costly repairs.
+                      Keep leaves, twigs, and other debris out of your chimney while allowing proper ventilation.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Home className="h-6 w-6 text-gold flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Peace of Mind</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">Animal Prevention</h3>
                     <p className="text-warm-gray">
-                      Know that your gas fireplace is safe, efficient, and ready to provide warmth when you need it.
+                      Keep birds, squirrels, and other animals from nesting in your chimney.
                     </p>
                   </div>
                 </div>
@@ -187,10 +189,10 @@ export default function GasMaintenancePage() {
         <div className="absolute inset-0 bg-[#B8860B]/85" />
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide text-black">
-            Schedule Your Gas Maintenance Today
+            Protect Your Chimney Today
           </h2>
           <p className="text-gray-800 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-            Keep your gas fireplace running safely and efficiently with our professional maintenance services.
+            Don't wait for damage to occur. Schedule your chimney cap and screen installation to protect your investment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:2676850530" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
@@ -294,7 +296,7 @@ export default function GasMaintenancePage() {
                         className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
                       >
                         <option value="">Select a service</option>
-                        <option value="gas-maintenance">Gas Maintenance</option>
+                        <option value="caps-screens">Caps & Screens</option>
                         <option value="fireplace-installation">Fireplace Installation</option>
                         <option value="fireplace-repair">Fireplace Repair</option>
                         <option value="fireplace-maintenance">Fireplace Maintenance</option>
@@ -314,7 +316,7 @@ export default function GasMaintenancePage() {
                         rows={4}
                         required
                         className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-vertical"
-                        placeholder="Tell us about your gas maintenance needs or any questions you have..."
+                        placeholder="Tell us about your chimney cap and screen needs or any questions you have..."
                       />
                     </div>
 

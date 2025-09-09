@@ -91,11 +91,11 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/services/gas-maintenance"
+                    href="/services/caps-screens"
                     className="text-warm-gray hover:text-gold transition-colors duration-300 flex items-center"
                   >
                     <span className="h-px w-4 bg-gold/50 mr-2"></span>
-                    Gas Maintenance
+                    Caps & Screens
                   </a>
                 </li>
                 <li>

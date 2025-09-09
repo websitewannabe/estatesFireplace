@@ -104,10 +104,10 @@ export default function Navigation() {
                       Chimney Sweeps
                     </a>
                     <a
-                      href="/services/gas-maintenance"
+                      href="/services/caps-screens"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
-                      Gas Maintenance
+                      Caps & Screens
                     </a>
                     <a
                       href="/services/chimney-inspections"
@@ -233,8 +233,8 @@ export default function Navigation() {
                     <a href="/services/chimney-sweeps" className="block text-warm-gray hover:text-gold transition-colors duration-200">
                       Chimney Sweeps
                     </a>
-                    <a href="/services/gas-maintenance" className="block text-warm-gray hover:text-gold transition-colors duration-200">
-                      Gas Maintenance
+                    <a href="/services/caps-screens" className="block text-warm-gray hover:text-gold transition-colors duration-200">
+                      Caps & Screens
                     </a>
                     <a href="/services/chimney-inspections" className="block text-warm-gray hover:text-gold transition-colors duration-200">
                       Chimney Inspections

@@ -50,7 +50,7 @@ export default function ContactUsPage() {
 
   const services = [
     "Chimney Sweeps",
-    "Gas Maintenance", 
+    "Caps & Screens", 
     "Chimney Inspections",
     "Chimney Linings",
     "Masonry Work",
@@ -437,7 +437,7 @@ export default function ContactUsPage() {
                         <option value="chimney-sweeps">Chimney Sweeps</option>
                         <option value="chimney-inspections">Chimney Inspections</option>
                         <option value="chimney-linings">Chimney Linings</option>
-                        <option value="gas-maintenance">Gas Maintenance</option>
+                        <option value="caps-screens">Caps & Screens</option>
                         <option value="masonry">Masonry</option>
                         <option value="other">Other</option>
                       </select>

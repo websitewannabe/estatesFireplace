@@ -104,7 +104,7 @@ export default function QuotePopup({ isOpen, onClose }: QuotePopupProps) {
                     <option value="chimney-sweeps">Chimney Sweeps</option>
                     <option value="chimney-inspections">Chimney Inspections</option>
                     <option value="chimney-linings">Chimney Linings</option>
-                    <option value="gas-maintenance">Gas Maintenance</option>
+                    <option value="caps-screens">Caps & Screens</option>
                     <option value="masonry">Masonry</option>
                     <option value="other">Other</option>
                   </select>
