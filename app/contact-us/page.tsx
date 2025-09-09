@@ -150,31 +150,31 @@ export default function ContactUsPage() {
                     </a>
                     <div className="border-t border-gold/10 my-1"></div>
                     <a
-                      href="/services#chimney-sweeps"
+                      href="/services/chimney-sweeps"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Chimney Sweeps
                     </a>
                     <a
-                      href="/services#gas-maintenance"
+                      href="/services/gas-maintenance"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Gas Maintenance
                     </a>
                     <a
-                      href="/services#chimney-inspections"
+                      href="/services/chimney-inspections"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Chimney Inspections
                     </a>
                     <a
-                      href="/services#chimney-linings"
+                      href="/services/chimney-linings"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Chimney Linings
                     </a>
                     <a
-                      href="/services#masonry"
+                      href="/services/masonry"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Masonry Work
@@ -314,23 +314,12 @@ export default function ContactUsPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[50vh]">
-        <div className="absolute inset-0 w-full h-full">
-          <div 
-            className="absolute inset-0 w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage: 'url("/images/portfolio/port1.png")',
-            }}
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/60" />
+      <section className="relative h-[50vh] bg-rich-black">
         <div className="relative h-full flex items-center">
           <div className="max-w-7xl mx-auto px-6 pt-20">
             <div className="animate-float">
               <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-wide">
-                Contact
-                <br />
+                <span className="text-white">Contact </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold/80 via-gold to-gold/80">
                   Us
                 </span>
@@ -560,6 +549,36 @@ export default function ContactUsPage() {
         </div>
       </section>
 
+      {/* Call to Action */}
+      <section
+        className="relative py-24"
+        style={{
+          backgroundImage: 'url("/images/long_cta.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#B8860B]/85" />
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide text-black">
+            Ready to Get Started?
+          </h2>
+          <p className="text-gray-800 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+            Don't wait to transform your home with a beautiful fireplace. Contact us today for a free consultation and let our experts help you create the perfect heating solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:2676850530" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
+              <span>Call (267) 685-0530</span>
+              <Flame className="h-5 w-5" />
+            </a>
+            <a href="mailto:info@estatesfireplace.com" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
+              <span>Get Free Quote</span>
+              <Flame className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-black py-16 px-6 border-t border-gold/10">
         <div className="max-w-7xl mx-auto">
@@ -595,11 +614,11 @@ export default function ContactUsPage() {
                 Quick Links
               </h3>
               <ul className="space-y-4">
-                {["Home", "Services", "Portfolio", "Testimonials", "About Us"].map(
+                {["Home", "Services", "Portfolio", "Testimonials", "Reviews", "About Us"].map(
                   (link) => (
                     <li key={link}>
                       <a
-                        href={link === "About Us" ? "/about-us" : `/#${link.toLowerCase()}`}
+                        href={link === "About Us" ? "/about-us" : link === "Reviews" ? "/reviews" : `/#${link.toLowerCase()}`}
                         className="text-warm-gray hover:text-gold transition-colors duration-300 flex items-center"
                       >
                         <span className="h-px w-4 bg-gold/50 mr-2"></span>

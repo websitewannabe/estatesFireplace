@@ -381,18 +381,30 @@ export default function MantelsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-6 bg-black/30 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="section-title gold-underline mb-8">Ready to Design Your Perfect Mantel?</h2>
-          <p className="text-warm-gray text-lg max-w-2xl mx-auto mb-8">
+      <section
+        className="relative py-24"
+        style={{
+          backgroundImage: 'url("/images/long_cta.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#B8860B]/85" />
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide text-black">
+            Ready to Design Your Perfect Mantel?
+          </h2>
+          <p className="text-gray-800 text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Let our expert craftsmen help you create the perfect mantel for your fireplace. Contact us today to begin your custom design journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:2676850530" className="luxury-button">
-              Call (267) 685-0530
+            <a href="tel:2676850530" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
+              <span>Call (267) 685-0530</span>
+              <Flame className="h-5 w-5" />
             </a>
-            <a href="mailto:info@estatesfireplace.com" className="luxury-button bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-black">
-              Get Free Quote
+            <a href="mailto:info@estatesfireplace.com" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
+              <span>Get Free Quote</span>
+              <Flame className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -411,30 +423,10 @@ export default function MantelsPage() {
             </button>
 
             <div className="p-8">
-              <h2 className="section-title gold-underline mb-8">Contact Us</h2>
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-8">
-                  <p className="text-warm-gray text-lg">
-                    Get in touch with us for a free consultation about your mantel needs.
-                  </p>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <Phone className="h-6 w-6 text-gold" />
-                      <span className="text-warm-gray">(267) 685-0530</span>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <Mail className="h-6 w-6 text-gold" />
-                      <span className="text-warm-gray">info@estatesfireplace.com</span>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <MapPin className="h-6 w-6 text-gold" />
-                      <span className="text-warm-gray">123 Elegance Drive, Southampton, PA 18966</span>
-                    </div>
-                  </div>
-                </div>
-
+              <h2 className="section-title gold-underline mb-8 text-center">Request a Quote</h2>
+              <div className="max-w-2xl mx-auto">
                 <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
-                  <h3 className="text-2xl font-bold mb-6 text-white">Send Us a Message</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-white text-center">Get Your Free Quote</h3>
                   <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" className="space-y-6">
                     <input type="hidden" name="form-name" value="contact" />
                     <div className="hidden">

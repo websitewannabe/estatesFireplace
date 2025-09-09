@@ -28,6 +28,7 @@ export default function ReviewsPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
@@ -43,6 +44,12 @@ export default function ReviewsPage() {
           setIsServicesDropdownOpen(false);
         }
       }
+      if (isProductsDropdownOpen) {
+        const target = event.target as Element;
+        if (!target.closest('.products-dropdown')) {
+          setIsProductsDropdownOpen(false);
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -52,7 +59,7 @@ export default function ReviewsPage() {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isServicesDropdownOpen]);
+  }, [isServicesDropdownOpen, isProductsDropdownOpen]);
 
   const reviews = [
     {
@@ -178,31 +185,31 @@ export default function ReviewsPage() {
                     </a>
                     <div className="border-t border-gold/10 my-1"></div>
                     <a
-                      href="/services#chimney-sweeps"
+                      href="/services/chimney-sweeps"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Chimney Sweeps
                     </a>
                     <a
-                      href="/services#gas-maintenance"
+                      href="/services/gas-maintenance"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Gas Maintenance
                     </a>
                     <a
-                      href="/services#chimney-inspections"
+                      href="/services/chimney-inspections"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Chimney Inspections
                     </a>
                     <a
-                      href="/services#chimney-linings"
+                      href="/services/chimney-linings"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Chimney Linings
                     </a>
                     <a
-                      href="/services#masonry"
+                      href="/services/masonry"
                       className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
                     >
                       Masonry Work
@@ -218,12 +225,51 @@ export default function ReviewsPage() {
                 </div>
               )}
             </div>
-            <a
-              href="/#products"
-              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
-            >
-              Products
-            </a>
+            <div className="relative group products-dropdown">
+              <button
+                onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                className={`nav-link flex items-center space-x-1 ${hasScrolled ? "text-gold" : "text-white"} cursor-pointer`}
+              >
+                <span>Products</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isProductsDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isProductsDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-sm border border-gold/20 rounded-lg shadow-xl z-50">
+                  <div className="py-2">
+                    <a
+                      href="/products/fireplaces"
+                      className="block px-4 py-3 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
+                    >
+                      Fireplaces
+                    </a>
+                    <a
+                      href="/products/fireplace-inserts"
+                      className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
+                    >
+                      Fireplace Inserts
+                    </a>
+                    <a
+                      href="/products/stoves"
+                      className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
+                    >
+                      Stoves
+                    </a>
+                    <a
+                      href="/products/mantels"
+                      className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
+                    >
+                      Mantels
+                    </a>
+                    <a
+                      href="/products/outdoor-living"
+                      className="block px-4 py-2 text-warm-gray hover:text-gold hover:bg-gold/10 transition-colors duration-200"
+                    >
+                      Outdoor Living
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
             <a
               href="/about-us"
               className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
@@ -235,6 +281,12 @@ export default function ReviewsPage() {
               className={`nav-link ${hasScrolled ? "text-gold" : "text-white"} border-b-2 border-gold`}
             >
               Reviews
+            </a>
+            <a
+              href="/contact-us"
+              className={`nav-link ${hasScrolled ? "text-gold" : "text-white"}`}
+            >
+              Contact Us
             </a>
             <button
               onClick={() => setIsContactOpen(true)}
@@ -292,14 +344,32 @@ export default function ReviewsPage() {
                   </div>
                 )}
               </div>
-              <a href="/#products" className="nav-link">
-                Products
-              </a>
+              <div>
+                <button
+                  onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                  className="nav-link flex items-center justify-between w-full text-left"
+                >
+                  <span>Products</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isProductsDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isProductsDropdownOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    <a href="/products/fireplaces" className="block text-warm-gray hover:text-gold transition-colors duration-200">Fireplaces</a>
+                    <a href="/products/fireplace-inserts" className="block text-warm-gray hover:text-gold transition-colors duration-200">Fireplace Inserts</a>
+                    <a href="/products/stoves" className="block text-warm-gray hover:text-gold transition-colors duration-200">Stoves</a>
+                    <a href="/products/mantels" className="block text-warm-gray hover:text-gold transition-colors duration-200">Mantels</a>
+                    <a href="/products/outdoor-living" className="block text-warm-gray hover:text-gold transition-colors duration-200">Outdoor Living</a>
+                  </div>
+                )}
+              </div>
               <a href="/about-us" className="nav-link">
                 About Us
               </a>
               <a href="/reviews" className="nav-link text-gold">
                 Reviews
+              </a>
+              <a href="/contact-us" className="nav-link">
+                Contact Us
               </a>
               <button
                 onClick={() => {
@@ -316,23 +386,12 @@ export default function ReviewsPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[50vh]">
-        <div className="absolute inset-0 w-full h-full">
-          <div 
-            className="absolute inset-0 w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage: 'url("/images/portfolio/port2.png")',
-            }}
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/60" />
+      <section className="relative h-[50vh] bg-rich-black">
         <div className="relative h-full flex items-center">
           <div className="max-w-7xl mx-auto px-6 pt-20">
             <div className="animate-float">
               <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 tracking-wide">
-                Customer
-                <br />
+                <span className="text-white">Customer </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold/80 via-gold to-gold/80">
                   Reviews
                 </span>
@@ -529,18 +588,30 @@ export default function ReviewsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-6 bg-warm-gray/5">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="section-title gold-underline mb-8">Ready to Join Our Happy Customers?</h2>
-          <p className="text-warm-gray text-lg max-w-2xl mx-auto mb-8">
+      <section
+        className="relative py-24"
+        style={{
+          backgroundImage: 'url("/images/long_cta.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#B8860B]/85" />
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <h2 className="font-playfair text-4xl md:text-5xl mb-6 tracking-wide text-black">
+            Ready to Join Our Happy Customers?
+          </h2>
+          <p className="text-gray-800 text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Experience the Estates Fireplace difference for yourself. Contact us today for a free consultation and see why our customers consistently rate us 5 stars.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:2676850530" className="luxury-button">
-              Call (267) 685-0530
+            <a href="tel:2676850530" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
+              <span>Call (267) 685-0530</span>
+              <Flame className="h-5 w-5" />
             </a>
-            <a href="mailto:info@estatesfireplace.com" className="luxury-button bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-black">
-              Get Free Quote
+            <a href="mailto:info@estatesfireplace.com" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
+              <span>Get Free Quote</span>
+              <Flame className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -560,36 +631,11 @@ export default function ReviewsPage() {
             </button>
 
             <div className="p-8">
-              <h2 className="section-title gold-underline mb-8">Contact Us</h2>
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-8">
-                  <p className="text-warm-gray text-lg">
-                    Get in touch with us for a free consultation about your
-                    fireplace needs.
-                  </p>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <Phone className="h-6 w-6 text-gold" />
-                      <span className="text-warm-gray">(267) 685-0530</span>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <Mail className="h-6 w-6 text-gold" />
-                      <span className="text-warm-gray">
-                        info@estatesfireplace.com
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <MapPin className="h-6 w-6 text-gold" />
-                      <span className="text-warm-gray">
-                        123 Elegance Drive, Southampton, PA 18966
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
+              <h2 className="section-title gold-underline mb-8 text-center">Request a Quote</h2>
+              <div className="max-w-2xl mx-auto">
                 <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
-                  <h3 className="text-2xl font-bold mb-6 text-white">
-                    Send Us a Message
+                  <h3 className="text-2xl font-bold mb-6 text-white text-center">
+                    Get Your Free Quote
                   </h3>
                   <form 
                     name="contact" 
@@ -751,11 +797,11 @@ export default function ReviewsPage() {
                 Quick Links
               </h3>
               <ul className="space-y-4">
-                {["Home", "Services", "Portfolio", "Testimonials", "About Us"].map(
+                {["Home", "Services", "Portfolio", "Testimonials", "Reviews", "About Us"].map(
                   (link) => (
                     <li key={link}>
                       <a
-                        href={link === "About Us" ? "/about-us" : `/#${link.toLowerCase()}`}
+                        href={link === "About Us" ? "/about-us" : link === "Reviews" ? "/reviews" : `/#${link.toLowerCase()}`}
                         className="text-warm-gray hover:text-gold transition-colors duration-300 flex items-center"
                       >
                         <span className="h-px w-4 bg-gold/50 mr-2"></span>
