@@ -233,7 +233,7 @@ export default function OutdoorLivingPage() {
 
             <div className="group relative overflow-hidden rounded-lg">
               <img
-                src="/images/Outdoor Living/imgi_25_2021-Outdoor-Blog-1-Outdoor-Custom-Firetable-240x300.jpg"
+                src="/images/Outdoor Living/imgi_25_2021-Outdoor-Blog-1-Outdoor-Custom-Firetable.jpg"
                 alt="Custom Outdoor Firetable"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
