@@ -176,6 +176,30 @@ export default function ChimneySweepsPage() {
         </div>
       </section>
 
+      {/* Certification Section */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-900/50 rounded-2xl p-12">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="flex justify-center">
+                <img
+                  src="/images/Icons and Badges/imgi_1_CCS_Logos.png"
+                  alt="Chimney Safety Institute of America Certification"
+                  className="w-[225px] h-[225px] object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div>
+                <h2 className="section-title gold-underline mb-6">Certified Professional Services</h2>
+                <p className="text-warm-gray text-lg leading-relaxed">
+                  Our chimney sweep technicians are certified by the Chimney Safety Institute of America (CSIA), 
+                  ensuring the highest standards of safety and professionalism in every service we provide.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section
         className="relative py-24"
