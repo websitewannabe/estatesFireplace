@@ -15,7 +15,9 @@ import {
 
 export default function PortfolioPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [selectedGalleryImage, setSelectedGalleryImage] = useState<number | null>(null);
   const [currentFilter, setCurrentFilter] = useState("all");
+  const [visibleGalleryImages, setVisibleGalleryImages] = useState(10);
 
   const portfolioItems = [
     {
@@ -51,6 +53,49 @@ export default function PortfolioPage() {
     // Add more portfolio items as needed
   ];
 
+  const outdoorLivingImages = [
+    "/images/Outdoor Living/imgi_11_110016.jpg",
+    "/images/Outdoor Living/imgi_12_videoimage_outdoor.jpg",
+    "/images/Outdoor Living/imgi_13_tt2-300x169-1.jpg",
+    "/images/Outdoor Living/imgi_14_PTO30CFT-A-1920x680-1.jpg",
+    "/images/Outdoor Living/imgi_16_2021-Outdoor-Blog-1-Outdoor-Wall-Burner.jpg",
+    "/images/Outdoor Living/imgi_17_Tempest_Torch-224x300-1.jpg",
+    "/images/Outdoor Living/imgi_19_U900E-400x225-1-300x169-1.jpg",
+    "/images/Outdoor Living/imgi_20_tt1-300x169-1.jpg",
+    "/images/Outdoor Living/imgi_21_highland-hearth-install-2015.jpg",
+    "/images/Outdoor Living/imgi_23_2021-Outdoor-Blog-3-Gin-Firetable.jpg",
+    "/images/Outdoor Living/imgi_24_Brad-Snider-Quality-Landscapes.jpg",
+    "/images/Outdoor Living/imgi_25_2021-Outdoor-Blog-1-Outdoor-Custom-Firetable.jpg",
+    "/images/Outdoor Living/imgi_26_Tempest_Torch_2-200x300-1.jpg",
+    "/images/Outdoor Living/imgi_27_2020-08-09_13-04-30-300x230-1-300x239-1.png",
+    "/images/Outdoor Living/imgi_28_2.jpg",
+    "/images/Outdoor Living/imgi_29_Tempest_outdoors.jpg",
+    "/images/Outdoor Living/imgi_30_2020-08-09_17-04-05-300x199-1-300x239-1.png",
+    "/images/Outdoor Living/imgi_39_Warming_Trends_Outdoor_Firepit-300x200.jpg",
+    "/images/Outdoor Living/imgi_40_Estates_Chimney_Test_outdoor_image-300x200.jpg",
+    "/images/Outdoor Living/imgi_41_Warming_Trends_Firepit_2-300x225.jpg",
+    "/images/Outdoor Living/imgi_42_110016-200x300.jpg",
+    "/images/Outdoor Living/imgi_43_videoimage_outdoor-300x164.jpg",
+    "/images/Outdoor Living/imgi_44_PTO30CFT-A-1920x680-1-300x106.jpg",
+    "/images/Outdoor Living/imgi_45_Tempest_Torch_2-200x300.jpg",
+    "/images/Outdoor Living/imgi_46_2021-Outdoor-Blog-1-Outdoor-Wall-Burner-300x300.jpg",
+    "/images/Outdoor Living/imgi_47_Emily_Rose_Lakewood_Collection-scaled-1-300x221.jpg",
+    "/images/Outdoor Living/imgi_48_highland-hearth-install-2015-224x300.jpg",
+    "/images/Outdoor Living/imgi_49_Cove_Outdoor_Firepit-300x200.jpg",
+    "/images/Outdoor Living/imgi_50_2021-Outdoor-Blog-3-Gin-Firetable-300x300.jpg",
+    "/images/Outdoor Living/imgi_51_Brad-Snider-Quality-Landscapes-300x200.jpg",
+    "/images/Outdoor Living/imgi_52_2021-Outdoor-Blog-1-Outdoor-Custom-Firetable-240x300.jpg",
+    "/images/Outdoor Living/imgi_53_2-300x276.jpg",
+    "/images/Outdoor Living/imgi_54_Tempest_outdoors-232x300.jpg",
+    "/images/Outdoor Living/imgi_55_Tempest_Torch-224x300.jpg",
+    "/images/Outdoor Living/scalled_10_Warming_Trends_Firepit_2.jpg",
+    "/images/Outdoor Living/scalled_16_Emily_Rose_Lakewood_Collection-scaled-1.jpg",
+    "/images/Outdoor Living/scalled_22_Cove_Outdoor_Firepit.jpg",
+    "/images/Outdoor Living/scalled_8_Warming_Trends_Outdoor_Firepit.jpg",
+    "/images/Outdoor Living/scalled_9_Estates_Chimney_Test_outdoor_image.jpg",
+    "/images/Outdoor Living/scalled_imgi_10_Warming_Trends_Firepit_2.jpg",
+  ];
+
   const categories = [
     { id: "all", name: "All Projects", count: portfolioItems.length },
     { id: "fireplace", name: "Fireplaces", count: portfolioItems.filter(item => item.category === "fireplace").length },
@@ -81,6 +126,30 @@ export default function PortfolioPage() {
 
   const closeLightbox = () => {
     setSelectedImage(null);
+  };
+
+  const nextGalleryImage = () => {
+    if (selectedGalleryImage !== null) {
+      setSelectedGalleryImage((selectedGalleryImage + 1) % outdoorLivingImages.length);
+    }
+  };
+
+  const prevGalleryImage = () => {
+    if (selectedGalleryImage !== null) {
+      setSelectedGalleryImage(selectedGalleryImage === 0 ? outdoorLivingImages.length - 1 : selectedGalleryImage - 1);
+    }
+  };
+
+  const openGalleryLightbox = (index: number) => {
+    setSelectedGalleryImage(index);
+  };
+
+  const closeGalleryLightbox = () => {
+    setSelectedGalleryImage(null);
+  };
+
+  const loadMoreImages = () => {
+    setVisibleGalleryImages(prev => Math.min(prev + 10, outdoorLivingImages.length));
   };
 
   return (
@@ -174,6 +243,57 @@ export default function PortfolioPage() {
               <Flame className="h-16 w-16 text-gold mx-auto mb-4" />
               <h3 className="font-playfair text-2xl text-gold mb-2">No Projects Found</h3>
               <p className="text-warm-gray">Try selecting a different category to view our work.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Image Gallery Section */}
+      <section className="py-20 px-6 bg-black/20 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto">
+          <div className="gold-underline-center mb-16">
+            <h2 className="section-title mb-0">Image Gallery</h2>
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {outdoorLivingImages.slice(0, visibleGalleryImages).map((image, index) => (
+              <div
+                key={index}
+                className="relative group overflow-hidden animated-border cursor-pointer"
+                onClick={() => openGalleryLightbox(index)}
+              >
+                <div className="relative">
+                  <img
+                    src={image}
+                    alt={`Outdoor Living Image ${index + 1}`}
+                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="text-center">
+                      <Maximize2 className="h-8 w-8 text-white mx-auto mb-2" />
+                      <p className="text-white font-playfair text-sm">View Image</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Load More Button */}
+          {visibleGalleryImages < outdoorLivingImages.length && (
+            <div className="text-center mt-12">
+              <button
+                onClick={loadMoreImages}
+                className="luxury-button inline-flex items-center space-x-2"
+              >
+                <span>Load More Images</span>
+                <Flame className="h-5 w-5" />
+              </button>
+              <p className="text-warm-gray text-sm mt-4">
+                Showing {visibleGalleryImages} of {outdoorLivingImages.length} images
+              </p>
             </div>
           )}
         </div>
@@ -308,6 +428,62 @@ export default function PortfolioPage() {
                     {feature}
                   </span>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Gallery Lightbox Modal */}
+      {selectedGalleryImage !== null && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm">
+          <div className="relative max-w-6xl max-h-[90vh] w-full">
+            {/* Close Button */}
+            <button
+              onClick={closeGalleryLightbox}
+              className="absolute top-4 right-4 z-10 p-2 text-white hover:text-gold transition-colors duration-300 bg-black/50 rounded-full"
+              aria-label="Close gallery lightbox"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevGalleryImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 text-white hover:text-gold transition-colors duration-300 bg-black/50 rounded-full"
+              aria-label="Previous gallery image"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              onClick={nextGalleryImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 text-white hover:text-gold transition-colors duration-300 bg-black/50 rounded-full"
+              aria-label="Next gallery image"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+
+            {/* Image */}
+            <div className="relative">
+              <img
+                src={outdoorLivingImages[selectedGalleryImage]}
+                alt={`Outdoor Living Image ${selectedGalleryImage + 1}`}
+                className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+              />
+            </div>
+
+            {/* Image Info */}
+            <div className="mt-6 bg-black/50 backdrop-blur-sm rounded-lg p-6 border border-gold/20">
+              <h3 className="font-playfair text-2xl text-gold mb-2">
+                Outdoor Living Image {selectedGalleryImage + 1}
+              </h3>
+              <p className="text-warm-gray mb-4">
+                Beautiful outdoor living and fireplace installations showcasing our craftsmanship and attention to detail.
+              </p>
+              <div className="flex items-center space-x-2 text-warm-gray">
+                <span className="text-sm">
+                  {selectedGalleryImage + 1} of {outdoorLivingImages.length} images
+                </span>
               </div>
             </div>
           </div>

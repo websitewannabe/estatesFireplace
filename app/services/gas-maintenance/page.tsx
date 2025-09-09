@@ -197,10 +197,14 @@ export default function GasMaintenancePage() {
               <span>Call (267) 685-0530</span>
               <Flame className="h-5 w-5" />
             </a>
-            <a href="mailto:info@estatesfireplace.com" className="luxury-button inline-flex items-center space-x-2 text-white" style={{ background: "#000000", backgroundImage: "none" }}>
+            <button 
+              onClick={() => setIsContactOpen(true)}
+              className="luxury-button inline-flex items-center space-x-2 text-white" 
+              style={{ background: "#000000", backgroundImage: "none" }}
+            >
               <span>Get Free Quote</span>
               <Flame className="h-5 w-5" />
-            </a>
+            </button>
           </div>
         </div>
       </section>
