@@ -247,7 +247,7 @@ export default function OutdoorLivingPage() {
           </div>
 
           <div className="text-center mt-12">
-            <a href="/portfolio" className="luxury-button bg-gold/20 border-2 border-gold text-white hover:bg-gold hover:text-black backdrop-blur-sm">
+            <a href="/portfolio" className="luxury-button bg-gold/20 border-2 border-gold text-black hover:bg-gold hover:text-black backdrop-blur-sm">
               View Full Portfolio
             </a>
           </div>
@@ -274,7 +274,7 @@ export default function OutdoorLivingPage() {
                 <a href="tel:2676850530" className="luxury-button">
                   Start Design Process
                 </a>
-                <a href="/reviews" className="luxury-button bg-gold/20 border-2 border-gold text-white hover:bg-gold hover:text-black backdrop-blur-sm">
+                <a href="/reviews" className="luxury-button bg-gold/20 border-2 border-gold text-black hover:bg-gold hover:text-black backdrop-blur-sm">
                   View Gallery
                 </a>
               </div>
