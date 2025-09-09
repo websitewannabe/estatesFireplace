@@ -54,7 +54,7 @@ export default function Footer() {
                   (link) => (
                     <li key={link}>
                       <a
-                        href={link === "About Us" ? "/about-us" : link === "Reviews" ? "/reviews" : link === "Services" ? "/services" : `#${link.toLowerCase()}`}
+                        href={link === "About Us" ? "/about-us" : link === "Reviews" ? "/reviews" : link === "Services" ? "/services" : link === "Portfolio" ? "/portfolio" : `#${link.toLowerCase()}`}
                         className="text-warm-gray hover:text-gold transition-colors duration-300 flex items-center"
                       >
                         <span className="h-px w-4 bg-gold/50 mr-2"></span>
